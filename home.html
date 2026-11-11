@@ -1,0 +1,1667 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>3Hills Homestay HaLong | Câu chuyện</title>
+    <meta name="description" content="都内マンションの仕入れ・高断熱リノベーション・再販を通じて、取引に関わるすべての方の期待に応えてきました。">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@1,6..96,400;1,6..96,500&family=Plus+Jakarta+Sans:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Plus+Jakarta+Sans:wght@500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,400;1,600&family=Playfair+Display:wght@700;800&subset=vietnamese&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Outfit:wght@300;400;500&family=Lexend:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Be+Vietnam+Pro:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="trangchu.css">
+    <link rel="stylesheet" href="mobile.css">
+    <link rel="icon" type="image/x-icon" href="logoduan.png">
+    <script src="mobile.js" defer></script>
+    <style>
+        /* 1. Ẩn thanh cuộn mặc định */
+        html, body {
+          scrollbar-width: none;
+          -ms-overflow-style: none;
+        }
+
+        html::-webkit-scrollbar,
+        body::-webkit-scrollbar 
+        {
+          display: none;
+        }
+
+        /* 2. Rãnh cuộn bên phải */
+        .custom-scrollbar-track {
+          position: fixed;
+          top: 50%;
+          right: 20px;
+          transform: translateY(-50%);
+          width: 6px;
+          height: 200px;
+          background-color: #e2e8f0;
+          border-radius: 10px;
+          z-index: 9999;
+          pointer-events: none;
+        }
+
+        /* 3. Thanh cuộn màu đen */
+        .custom-scrollbar-thumb {
+          width: 100%;
+          height: 40px;
+          background-color: #000000;
+          border-radius: 10px;
+          position: absolute;
+          top: 0;
+          transition: transform 0.1s ease-out;
+        }
+    </style>
+
+    <style>
+        /* ===== Nút "Dịch vụ" + dropdown ===== */
+        .svc-dd { position: relative; display: inline-block; }
+        .svc-dd__chev { transition: transform .3s ease; flex-shrink: 0; }
+        .svc-dd:hover .svc-dd__chev, .svc-dd.open .svc-dd__chev { transform: rotate(180deg); }
+        .svc-dd__menu {
+            position: absolute; top: 100%; right: 0; min-width: 100%; padding-top: 10px;
+            opacity: 0; visibility: hidden; transform: translateY(-6px);
+            transition: opacity .25s ease, transform .25s ease, visibility .25s; z-index: 10000;
+        }
+        .svc-dd:hover .svc-dd__menu, .svc-dd.open .svc-dd__menu, .svc-dd:focus-within .svc-dd__menu {
+            opacity: 1; visibility: visible; transform: translateY(0);
+        }
+        .svc-dd__list {
+            display: flex; flex-direction: column; gap: 4px; padding: 8px; border-radius: 24px;
+            background: rgba(255,255,255,.72); border: 1px solid rgba(255,255,255,.8);
+            backdrop-filter: blur(16px) saturate(170%); -webkit-backdrop-filter: blur(16px) saturate(170%);
+            box-shadow: 0 12px 30px rgba(0,0,0,.14);
+        }
+        .svc-dd__item {
+            display: block; padding: 12px 18px; border-radius: 16px; white-space: nowrap;
+            font-size: 14.5px; font-weight: 600; color: #5c5c5c; text-decoration: none;
+            transition: background .2s, color .2s;
+        }
+        .svc-dd__item:hover, .svc-dd__item:focus-visible { background: rgba(166,130,74,.18); color: #a6824a; outline: none; }
+    </style>
+</head>
+<body>
+    <div class="custom-scrollbar-track">
+        <div class="custom-scrollbar-thumb" id="scrollThumb"></div>
+    </div>
+    <header class="header" id="header" style="display: flex; justify-content: space-between; align-items: center; width: 100%; padding: 15px 30px; box-sizing: border-box;">
+
+        <!-- Logo nằm bên trái -->
+        <a class="logo" href="/" style="display: inline-flex; align-items: center; gap: 16px; text-decoration: none; cursor: pointer;">
+            <!-- Ảnh logo hình vuông bo góc -->
+            <img src="logoduan.png" alt="3Hills Logo" style="width: 50px; height: 50px; object-fit: cover; border-radius: 18px; box-shadow: 0 6px 16px rgba(0,0,0,0.15); flex-shrink: 0;">
+
+            <!-- Nhóm chữ bên cạnh -->
+            <div style="display: flex; flex-direction: column;">
+                <span style="font-family: 'Playfair Display', Georgia, serif; font-size: 20px; font-weight: 700; color: #a6824a; line-height: 1.1;">YOUR BRAND<br /> NAME</span>
+                <span style="font-family: 'Montserrat', sans-serif; font-size: 12px; font-weight: 600; color: #a6824a; letter-spacing: 2px; margin-top: 4px;"></span>
+            </div>
+        </a>
+
+        <!-- Thanh Menu/Nav sẽ tự động đẩy sang bên phải -->
+        <div class="header__right">
+            <nav class="nb-10__bar" id="nb-10-bar" aria-label="Primary">
+                <span class="nb-10__pill" id="nb-10-pill" aria-hidden="true"></span>
+                <a class="nb-10__link" href="home.html" aria-current="page" style="color: #808080">
+                    Câu chuyện
+                </a>
+                <a class="nb-10__link" href="../hang_phong/hang_phong.html" style="color: #808080">Hạng phòng</a>
+                <a class="nb-10__link" href="../Photo Walk/hanh_trinh.html" style="color: #808080">Photo Walk</a>
+            </nav>
+            <button style="appearance: none; -webkit-appearance: none; position: relative; display: inline-flex; align-items: center; justify-content: center; width: 120px; height: 56px; padding: 0; margin: 0; font-size: 16px; font-weight: 700; font-family: inherit; color: #000000; background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.5); border-radius: 50px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); cursor: pointer; overflow: hidden; transition: all 0.3s ease;"
+                    onmouseover="this.style.background='rgba(255, 255, 255, 0.25)'; this.style.borderColor='rgba(255, 255, 255, 0.8)'; this.style.transform='translateY(-2px)'; this.querySelector('.light-sweep').style.left='150%';"
+                    onmouseout="this.style.background='rgba(255, 255, 255, 0.1)'; this.style.borderColor='rgba(255, 255, 255, 0.5)'; this.style.transform='translateY(0)'; this.querySelector('.light-sweep').style.left='-150%';">
+
+                <!-- Thẻ div này đóng vai trò là vệt sáng lướt qua -->
+                <div class="light-sweep" style="position: absolute; top: 0; left: -150%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.6), transparent); transform: skewX(-25deg); transition: left 0.6s ease-in-out; z-index: 1; pointer-events: none;"></div>
+
+                <!-- Nội dung (Icon và Chữ) nổi lên trên -->
+                <div style="position: relative; z-index: 2; display: flex; align-items: center; gap: 8px;">
+                    <span style="color: #808080; font-size: 14.5px">
+                       <a href="home_bantrung.html">
+                            Tiếng Việt/ 中文
+                       </a>
+                    </span>
+                </div>
+
+            </button>
+            <div class="svc-dd">
+            <button style="appearance: none;
+                    -webkit-appearance: none;
+                    position: relative;
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 220px;
+                    height: 56px;
+                    padding: 0;
+                    margin: 0;
+                    font-size: 16px;
+                    font-weight: 700;
+                    font-family: inherit;
+                    color: #000000;
+                    background: rgba(255, 255, 255, 0.1);
+                    backdrop-filter: blur(10px);
+                    -webkit-backdrop-filter: blur(10px);
+                    border: 1px solid rgba(255, 255, 255, 0.5);
+                    border-radius: 50px;
+                    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+                    cursor: pointer;
+                    overflow: hidden;
+                    transition: all 0.3s ease;"
+                    onmouseover="    this.style.background = 'rgba(255, 255, 255, 0.25)';
+                                     this.style.borderColor = 'rgba(255, 255, 255, 0.8)';
+                                     this.style.transform = 'translateY(-2px)'; this.querySelector('.light-sweep').style.left = '150%';"
+                    onmouseout="     this.style.background = 'rgba(255, 255, 255, 0.1)';
+                                     this.style.borderColor = 'rgba(255, 255, 255, 0.5)';
+                                     this.style.transform = 'translateY(0)'; this.querySelector('.light-sweep').style.left = '-150%';">
+
+                <!-- Thẻ div này đóng vai trò là vệt sáng lướt qua -->
+                <div class="light-sweep" style="position: absolute; top: 0; left: -150%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.6), transparent); transform: skewX(-25deg); transition: left 0.6s ease-in-out; z-index: 1; pointer-events: none;"></div>
+
+                <!-- Nội dung (Icon và Chữ) nổi lên trên -->
+                <div style="position: relative; z-index: 2; display: flex; align-items: center; gap: 8px;">
+                    <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" color="#808080">
+                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                        <line x1="16" y1="2" x2="16" y2="6"></line>
+                        <line x1="8" y1="2" x2="8" y2="6"></line>
+                        <line x1="3" y1="10" x2="21" y2="10"></line>
+                    </svg>
+                    <span style="color: #808080; font-size: 14.5px">
+                        Đặt dịch vụ
+                    </span>
+                    <svg class="svc-dd__chev" viewBox="0 0 24 24" width="16" height="16" stroke="#808080" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </div>
+            </button>
+            <div class="svc-dd__menu"><div class="svc-dd__list">
+                <a class="svc-dd__item" href="../dat_phong/dat_phong.html">Đặt phòng</a>
+                <a class="svc-dd__item" href="../photo_walk/photo_walk.html">Photo Walk</a>
+            </div></div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- ============ HERO ============ -->
+        <section class="hero" id="hero">
+
+            <div class="stage" id="stage">
+                <!-- chữ nền xám (hiện ngoài khung ảnh) -->
+                <p class="bigtext" id="bigtext" aria-hidden="true"></p>
+
+                <!-- cửa sổ ảnh: full-screen -> thu nhỏ thành thẻ giữa -->
+                <div class="window" id="window">
+                    <img class="slide slide--1" src="nenchinh1.png" alt="">
+                    <img class="slide slide--2" src="nenchinh2.png" alt="">
+                    <div class="window__shade"></div>
+                    <p class="bigtext bigtext--glass" id="glasstext" aria-hidden="true"></p>
+                </div>
+
+                <!-- các thẻ ảnh bay vào -->
+                <figure class="card card--a" data-s0="5" data-kx="-30" data-ky="12" data-ks="0" data-appear="3">
+                    <img src="anhtroi1.png" alt="">
+                </figure>
+                <figure class="card card--b" data-s0="0" data-kx="-31" data-ky="7.9" data-ks="0" data-appear="14">
+                    <img src="anhtroi2.png" alt="">
+                </figure>
+                <figure class="card card--d" data-s0="26" data-kx="50" data-ky="9" data-ks="0.23" data-appear="25">
+                    <img src="anhtroi3.png" alt="">
+                </figure>
+                <figure class="card card--e" data-s0="20" data-kx="30" data-ky="16" data-ks="0" data-appear="19">
+                    <img src="anhtroi4.png" alt="">
+                </figure>
+            </div>
+
+            <!-- chữ cuộn theo trang: bản tối (nền sáng) + bản trắng (bên trong khung ảnh) -->
+            <div class="overlay" id="overlay">
+                <p class="addr">Khu đồi Đặng Bá Hát<br>phường Hồng Gai, Thành phố Quảng Ninh </p>
+                <div class="lead">
+                    <h1 class="lead__title" style=" font-family: 'Playfair Display' , serif; font-weight: 800;">Tiên phong trong chuyển đổi số du lịch tự túc Hạ Long</h1>
+                    <p class="lead__text" style="font-family: 'Cormorant Garamond', serif; font-style: italic; color: #e9ef1e;">Xua tan mọi rào cản thông tin và ngôn ngữ, [Tên thương hiệu] ra đời với sứ mệnh xây dựng Hệ sinh thái truyền thông số đa ngôn ngữ, đồng hành cùng du khách trong hành trình khám phá Hạ Long thông minh, hiện đại và tiện lợi.</p>
+                </div>
+            </div>
+
+        </section>
+    </main>
+    <!-- ============ ĐẶT PHÒNG: form kính (giữa hero và phần VỀ [TÊN THƯƠNG HIỆU]) ============ -->
+    <section class="bk" id="booking" aria-label="Đặt phòng">
+        <div class="bk-tabs" role="tablist" aria-label="Chọn loại đặt chỗ">
+            <div class="bk-tabs-in">
+                <button type="button" class="bk-tab" id="bk-tab-br" role="tab" aria-selected="true" aria-controls="bk-panel-br" title="Phòng">BR</button>
+                <button type="button" class="bk-tab" id="bk-tab-pw" role="tab" aria-selected="false" aria-controls="bk-panel-pw" title="Photo Walk">PW</button>
+            </div>
+        </div>
+        <div class="bk-glass" id="bk-panel-br" role="tabpanel" aria-labelledby="bk-tab-br">
+            <div class="bk-field">
+                <label for="bk-in">Ngày nhận phòng</label>
+                <div class="bk-control">
+                    <input type="date" id="bk-in">
+                    <svg class="bk-icon" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="3" /><path d="M8 3v4M16 3v4M3 10h18" /></svg>
+                </div>
+            </div>
+
+            <div class="bk-field">
+                <label for="bk-out">Ngày trả phòng</label>
+                <div class="bk-control">
+                    <input type="date" id="bk-out">
+                    <svg class="bk-icon" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="3" /><path d="M8 3v4M16 3v4M3 10h18" /></svg>
+                </div>
+            </div>
+
+            <div class="bk-field">
+                <label for="bk-room">Hạng phòng quan tâm</label>
+                <div class="bk-control">
+                    <select id="bk-room">
+                        <option value="">Tất cả các hạng phòng</option>
+                        <option value="Hillside Deluxe">Hillside Deluxe</option>
+                        <option value="Bay View Suite">Bay View Suite</option>
+                        <option value="GROVE by MAY5">GROVE by May5</option>
+                        <option value="Heritage Family Villa">Heritage Family Villa</option>
+                    </select>
+                    <svg class="bk-icon" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6" /></svg>
+                </div>
+            </div>
+
+            <button class="bk-btn" type="button">
+                <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7" /><path d="M21 21l-4.3-4.3" /></svg>
+                Kiểm Tra &amp; Đặt
+            </button>
+        </div>
+
+        <div class="bk-glass" id="bk-panel-pw" role="tabpanel" aria-labelledby="bk-tab-pw" hidden>
+            <div class="bk-field">
+                <label for="pw-start">Ngày đặt chụp ảnh</label>
+                <div class="bk-control">
+                    <input type="date" id="pw-start">
+                    <svg class="bk-icon" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="3" /><path d="M8 3v4M16 3v4M3 10h18" /></svg>
+                </div>
+            </div>
+
+            <div class="bk-field">
+                <label for="pw-end">Ngày hết hạn chụp ảnh</label>
+                <div class="bk-control">
+                    <input type="date" id="pw-end">
+                    <svg class="bk-icon" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="3" /><path d="M8 3v4M16 3v4M3 10h18" /></svg>
+                </div>
+            </div>
+
+            <div class="bk-field">
+                <label for="pw-hours">Chụp trong</label>
+                <div class="bk-control">
+                    <select id="pw-hours">
+                        <option value="1">1 giờ</option><option value="2">2 giờ</option><option value="3">3 giờ</option><option value="4">4 giờ</option><option value="5">5 giờ</option><option value="6">6 giờ</option><option value="7">7 giờ</option><option value="8">8 giờ</option>
+                    </select>
+                    <svg class="bk-icon" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6" /></svg>
+                </div>
+            </div>
+
+            <button class="bk-btn" id="pw-btn" type="button">
+                <svg viewBox="0 0 24 24"><path d="M4 8h3l2-3h6l2 3h3v11H4z" /><circle cx="12" cy="13" r="3.5" /></svg>
+                Đặt Photo Walk
+            </button>
+        </div>
+    </section>
+    <script>
+            /* Thanh đặt phòng: KHÔNG bám trong lúc hiệu ứng ảnh trôi vào ở đầu trang.
+               Khi hero cuộn xong (đáy hero chạm đáy màn hình) thì thanh trượt lên và bám cố định ở đáy.
+               Khi cuộn tới footer thì thanh tắt đi. */
+            (() => {
+              const hero = document.getElementById('hero');
+              const bk = document.getElementById('booking');
+              let footer = null;   // footer nằm cuối trang, chưa có lúc script này chạy -> tìm khi cuộn
+              if (!hero || !bk) return;
+              let queued = false;
+              const update = () => {
+                queued = false;
+                const vh = window.innerHeight;
+                const heroDone = hero.getBoundingClientRect().bottom <= vh + 1;
+                if (!footer) footer = document.querySelector('.site-footer');
+                const atFooter = footer ? footer.getBoundingClientRect().top < vh : false;
+                bk.classList.toggle('is-docked', heroDone && !atFooter);
+              };
+              const request = () => { if (!queued) { queued = true; requestAnimationFrame(update); } };
+              addEventListener('scroll', request, { passive: true });
+              addEventListener('resize', request);
+              addEventListener('load', request);
+              update();
+            })();
+    </script>
+
+    <div class="section-header">
+        <span class="section-badge">VỀ [TÊN THƯƠNG HIỆU]</span>
+        <h2 style="font-family: 'Bodoni Moda', serif; font-style: italic; font-weight: 400; color: #D8B273; font-size: 42px; line-height: 1.2; letter-spacing: 0.5px; margin: 0; -webkit-font-smoothing: antialiased;">
+            Đánh thức cảm xúc giữa lòng di sản biển
+        </h2>
+    </div>
+    <!-- ============ SERVICES: 4 thẻ cuộn chồng ============ -->
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+        <symbol id="svc-y" viewBox="0 0 24 24">
+            <path d="M3.2 4.2 12 13l8.8-8.8M12 13v9.5" fill="none" stroke="currentColor" stroke-width="3.4" />
+        </symbol>
+    </svg>
+
+    <section class="svc" id="svc">
+        <div class="svc-stage">
+            <article class="svc-card svc-card--light">
+                <div class="svc-panel">
+                    <img src="Vechungtoi_1.png" alt="" style="width: 100%; height: 100%; object-fit: cover; display: block; margin: 0; padding: 0; border: none; max-width: none;">
+                    <nav class="svc-dots" aria-label="Slides"></nav>
+                </div>
+                <div class="svc-text">
+                    <h2 class="svc-title">Kết Nối Không Biên Giới</h2>
+                    <p class="svc-sub">Đưa câu chuyện bản địa vươn xa trên mọi nền tảng số</p>
+                    <p class="svc-p">Trong thời đại nội dung số, mỗi video không chỉ truyền tải hình ảnh mà còn mở ra cơ hội kết nối giữa điểm đến và du khách. YOUR BRAND NAME hướng đến xây dựng hệ sinh thái truyền thông song ngữ Việt – Trung, giúp những homestay, villa và trải nghiệm bản địa tại Hạ Long tiếp cận khách hàng thông qua các nền tảng trực tuyến.</p>
+                    <p class="svc-p">Từ sáng tạo video ngắn đến bản địa hóa nội dung trên TikTok, Facebook Reels, Instagram, Xiaohongshu và Douyin, chúng tôi chú trọng kể câu chuyện du lịch bằng hình ảnh chân thực, ngôn ngữ gần gũi và nội dung phù hợp với từng nhóm khách hàng. Qua đó, góp phần nâng cao khả năng nhận diện thương hiệu và mở rộng cơ hội tiếp cận thị trường trong nước lẫn quốc tế.</p>
+                    <ul class="svc-stats">
+                        <li><strong>02</strong><span>Ngôn ngữ Việt – Trung</span></li>
+                        <li><strong>05</strong><span>Nền tảng truyền thông định hướng</span></li>
+                        <li><strong>06–08</strong><span>Video ngắn mỗi tháng theo kế hoạch</span></li>
+                    </ul>
+                </div>
+            </article>
+            <article class="svc-card svc-card--dark">
+                <div class="svc-text">
+                    <p class="svc-eyebrow">VỀ KẾT NỐI CỘNG ĐỒNG BẢN ĐỊA</p>
+                    <h2 class="svc-title">Đưa Giá Trị Bản Địa Vươn Xa</h2>
+                    <p class="svc-sub">Cùng phát triển du lịch, cùng kiến tạo giá trị bền vững</p>
+                    <p class="svc-p">Mỗi cơ sở lưu trú địa phương đều mang trong mình một nét đẹp riêng, từ phong cách thiết kế đến câu chuyện văn hóa và sự hiếu khách. YOUR BRAND NAME hướng đến đồng hành cùng các chủ homestay, villa tại Hạ Long thông qua giải pháp truyền thông số, hỗ trợ quảng bá đa nền tảng và kết nối với cộng đồng du khách tự túc.</p>
+                    <p class="svc-p">Không chỉ hỗ trợ hoạt động kinh doanh, dự án còn hướng đến xây dựng mạng lưới Đại sứ Sinh viên, tạo cơ hội cho người trẻ thực hành ngoại ngữ, phát triển kỹ năng sáng tạo nội dung và tham gia các hoạt động phục vụ du lịch. Với định hướng hợp tác thử nghiệm có đo lường và quy trình thẩm định đối tác, chúng tôi mong muốn góp phần xây dựng môi trường du lịch Hạ Long an toàn, thân thiện và chuyên nghiệp hơn.</p>
+                    <ul class="svc-stats">
+                        <li><strong>03</strong><span>Lớp thẩm định cơ sở lưu trú</span></li>
+                        <li><strong>40%</strong><span>Ngưỡng lấp đầy phòng theo cơ chế thử nghiệm đề xuất</span></li>
+                        <li><strong>100K</strong><span>VNĐ/giờ thù lao CTV theo kế hoạch</span></li>
+                    </ul>
+                </div>
+                <div class="svc-panel">
+                    <img src="Vechungtoi_2.png" alt="" style="width: 100%; height: 100%; object-fit: cover; display: block; margin: 0; padding: 0; border: none; max-width: none;">
+                    <nav class="svc-dots" aria-label="Slides"></nav>
+                </div>
+            </article>
+            <article class="svc-card svc-card--light">
+                <div class="svc-panel">
+                    <img src="Vechungtoi_4.png" alt="" style="width: 100%; height: 100%; object-fit: cover; display: block; margin: 0; padding: 0; border: none; max-width: none;">
+                    <nav class="svc-dots" aria-label="Slides"></nav>
+                </div>
+                <div class="svc-text">
+                    <p class="svc-eyebrow">VỀ TRẢI NGHIỆM DU LỊCH TỰ TÚC</p>
+                    <h2 class="svc-title">Khám Phá Hạ Long Theo Cách Riêng</h2>
+                    <p class="svc-sub">Tự do hành trình, chủ động lựa chọn, trọn vẹn trải nghiệm</p>
+                    <p class="svc-p">Một chuyến đi đáng nhớ bắt đầu từ những lựa chọn phù hợp: nơi lưu trú yêu thích, điểm check-in độc đáo, phương tiện di chuyển thuận tiện và những trải nghiệm đậm chất địa phương. YOUR BRAND NAME hướng đến giúp du khách tự túc tiếp cận thông tin lưu trú và các tiện ích du lịch tại Hạ Long một cách thuận tiện hơn.</p>
+                    <p class="svc-p">Thông qua nền tảng thông tin đặt phòng, kênh tư vấn song ngữ và dịch vụ Photo Walk cùng người đồng hành bản địa, du khách có thêm cơ hội khám phá thành phố theo nhịp điệu của riêng mình. Từ những góc phố bình yên đến khoảnh khắc ngắm vịnh, mỗi trải nghiệm đều hướng đến sự minh bạch, thuận tiện và những kỷ niệm đáng lưu giữ.</p>
+                    <ul class="svc-stats">
+                        <li><strong>150K</strong><span>VNĐ/giờ Photo Walk theo đề xuất</span></li>
+                        <li><strong>24/7</strong><span>Định hướng hỗ trợ tư vấn</span></li>
+                        <li><strong>04</strong><span>Nhóm dịch vụ cốt lõi</span></li>
+                    </ul>
+                </div>
+            </article>
+            <article class="svc-card svc-card--dark">
+                <div class="svc-text">
+                    <p class="svc-eyebrow">VỀ [TÊN THƯƠNG HIỆU]</p>
+                    <h2 class="svc-title">Kết Nối Trải Nghiệm Số</h2>
+                    <p class="svc-sub">Nơi trải nghiệm bản địa vươn xa qua biên giới ngôn ngữ</p>
+                    <p class="svc-p">Tọa lạc tại thành phố di sản Hạ Long, YOUR BRAND NAME hướng đến xây dựng hệ sinh thái truyền thông số song ngữ Việt – Trung, kết nối các homestay, villa địa phương với cộng đồng du khách tự túc trong nước và quốc tế. Chúng tôi tin rằng mỗi chuyến đi không chỉ là hành trình khám phá, mà còn là cơ hội để cảm nhận văn hóa bản địa và lưu giữ những khoảnh khắc đáng nhớ.</p>
+                    <p class="svc-p">Được phát triển từ định hướng kết hợp truyền thông sáng tạo và chuyển đổi số du lịch, YOUR BRAND NAME mang đến giải pháp quảng bá đa nền tảng, hỗ trợ thông tin lưu trú và kết nối các tiện ích du lịch. Chúng tôi mong muốn thu hẹp khoảng cách ngôn ngữ, mở rộng cơ hội cho các cơ sở lưu trú địa phương và giúp du khách khám phá Hạ Long thuận tiện, minh bạch hơn.</p>
+                    <ul class="svc-stats">
+                        <li><strong>04</strong><span>Nhóm dịch vụ cốt lõi</span></li>
+                        <li><strong>02</strong><span>Ngôn ngữ Việt – Trung</span></li>
+                        <li><strong>24/7</strong><span>Hỗ trợ thông tin khách hàng</span></li>
+                    </ul>
+                </div>
+                <div class="svc-panel">
+                    <img src="Vechungtoi_3.png" alt="" style="width: 100%; height: 100%; object-fit: cover; display: block; margin: 0; padding: 0; border: none; max-width: none;">
+                    <nav class="svc-dots" aria-label="Slides"></nav>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- ============ MỌI CHI TIẾT ĐỀU ĐƯỢC CHĂM CHÚT ============ -->
+    <section class="details-section">
+        <h2 class="ds-heading" style="font-size: 42px; font-weight: 400; color: #3a2e2b; margin-bottom: 5px;">
+            Hơn cả một chuyến đi
+            <em>
+                Là những điều đáng nhớ
+            </em>
+        </h2>
+
+        <div class="ds-grid">
+            <article class="ds-card">
+                <span class="ds-icon" aria-hidden="true">📷</span>
+                <h3 class="ds-title" style="font-family: 'Playfair Display', Georgia, serif; font-size: 22px; font-weight: bold; color: #111;">
+                    Góc Quay "Chữa Lành" POV
+                </h3>
+                <p class="ds-desc" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px; color: #555555; line-height: 1.6; margin-top: 10px;">
+                    Hỗ trợ góc quay & kịch bản video ngắn bắt trend Xiaohongshu / TikTok. Trang bị sẵn chân máy, gimbal cho du khách thỏa sức sáng tạo.
+                </p>
+            </article>
+
+            <article class="ds-card">
+                <span class="ds-icon" aria-hidden="true">🛵</span>
+                <h3 class="ds-title" style="font-family: 'Playfair Display', Georgia, serif; font-size: 22px; font-weight: bold; color: #111;">
+                    Thuê Xe Máy Phượt Biển
+                </h3>
+                <p class="ds-desc" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px; color: #555555; line-height: 1.6; margin-top: 10px;">
+                    Dàn xe ga đời mới, mũ bảo hiểm sạch sẽ và hỗ trợ bản đồ các quán cà phê ngắm vịnh, quán hải sản bản địa tươi ngon chuẩn vị Hạ Long.
+                </p>
+            </article>
+
+            <article class="ds-card">
+                <span class="ds-icon" aria-hidden="true">⛵</span>
+                <h3 class="ds-title" style="font-family: 'Playfair Display', Georgia, serif; font-size: 22px; font-weight: bold; color: #111;">
+                    Chèo Kayak & Du Thuyền Vịnh
+                </h3>
+                <p class="ds-desc" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px; color: #555555; line-height: 1.6; margin-top: 10px;">
+                    Hỗ trợ đặt tour du thuyền trong ngày, chèo thuyền Kayak luồn hang Luồn, tắm biển đảo Ti Tốp với mức giá chiết khấu đối tác độc quyền.
+                </p>
+            </article>
+
+            <article class="ds-card">
+                <span class="ds-icon" aria-hidden="true">🍵</span>
+                <h3 class="ds-title" style="font-family: 'Playfair Display', Georgia, serif; font-size: 22px; font-weight: bold; color: #111;">
+                    Trà Chiều Hoàng Hôn
+                </h3>
+                <p class="ds-desc" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px; color: #555555; line-height: 1.6; margin-top: 10px;">
+                    Thưởng thức trà Ô Long ấm chén men ngọc cùng bánh ngọt đặc sản, ngắm nhìn ánh hoàng hôn buông xuống cầu Bãi Cháy tuyệt đẹp.
+                </p>
+            </article>
+
+            <article class="ds-card">
+                <span class="ds-icon" aria-hidden="true">🍴</span>
+                <h3 class="ds-title" style="font-family: 'Playfair Display', Georgia, serif; font-size: 22px; font-weight: bold; color: #111;">
+                    Cẩm nang ẩm thực địa phương
+                </h3>
+                <p class="ds-desc" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px; color: #555555; line-height: 1.6; margin-top: 10px;">
+                    Gợi ý những món ăn đặc sản, địa điểm thưởng thức ẩm thực và các trải nghiệm ăn uống mang đậm hương vị Hạ Long và địa phương.
+                </p>
+            </article>
+
+            <article class="ds-card">
+                <span class="ds-icon" aria-hidden="true">🧳</span>
+                <h3 class="ds-title" style="font-family: 'Playfair Display', Georgia, serif; font-size: 22px; font-weight: bold; color: #111;">
+                    Hỗ trợ hành lý và lịch trình linh hoạt
+                </h3>
+                <p class="ds-desc" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px; color: #555555; line-height: 1.6; margin-top: 10px;">
+                    Hỗ trợ du khách tìm kiếm dịch vụ giữ hành lý qua đối tác phù hợp, thuận tiện khám phá thành phố trước giờ nhận phòng hoặc sau khi trả phòng.
+                </p>
+            </article>
+
+            <article class="ds-card">
+                <span class="ds-icon" aria-hidden="true">🌅</span>
+                <h3 class="ds-title" style="font-family: 'Playfair Display', Georgia, serif; font-size: 22px; font-weight: bold; color: #111;">
+                    Săn bình minh và ngắm hoàng hôn
+                </h3>
+                <p class="ds-desc" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px; color: #555555; line-height: 1.6; margin-top: 10px;">
+                    Gợi ý những địa điểm ngắm bình minh, hoàng hôn và cảnh biển Hạ Long,
+                    giúp du khách tận hưởng vẻ đẹp thành phố qua những khoảnh khắc bình yên và đầy cảm hứng.
+                </p>
+            </article>
+
+            <article class="ds-card">
+                <span class="ds-icon" aria-hidden="true">🎣</span>
+                <h3 class="ds-title" style="font-family: 'Playfair Display', Georgia, serif; font-size: 22px; font-weight: bold; color: #111;">
+                    Trải nghiệm văn hóa và làng chài
+                </h3>
+                <p class="ds-desc" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px; color: #555555; line-height: 1.6; margin-top: 10px;">
+                    Kết nối các chương trình tham quan phù hợp để tìm hiểu đời sống ngư dân, văn hóa biển và những câu chuyện địa phương,
+                    góp phần làm phong phú hành trình khám phá vịnh.
+                </p>
+            </article>
+        </div>
+    </section>
+
+    <!-- ============ KHÁCH NÓI GÌ (đánh giá, có nút trái/phải) ============ -->
+    <style>
+             /* KHÁCH_INLINE */
+             /* ==========================================================
+        KHÁCH NÓI GÌ – đánh giá khách hàng (carousel, tiền tố rv-)
+        ========================================================== */
+             .rv {
+                 /* đồng bộ với bảng màu của trang (giống .details-section) */
+                 --rv-bg: var(--bg);
+                 --rv-card: #fff;
+                 --rv-ink: #3b2a20;
+                 --rv-gold: #dfbd6e;
+                 --rv-gold-soft: #dfbd6e;
+                 --rv-muted: #8a7b70;
+                 --rv-line: #ebebeb;
+                 --rv-quote: #f0e3c4;
+                 background: var(--rv-bg);
+                 color: var(--rv-ink);
+                 font-family: "Times New Roman", Georgia, "Noto Serif", serif;
+                 padding: 56px 24px 72px;
+             }
+
+                 .rv *, .rv *::before, .rv *::after {
+                     box-sizing: border-box;
+                 }
+
+             .rv-wrap {
+                 max-width: 1680px;
+                 margin: 0 auto;
+             }
+
+             .rv-head {
+                 text-align: center;
+             }
+
+             .rv-eyebrow {
+                 display: inline-flex;
+                 align-items: center;
+                 gap: 16px;
+                 color: var(--rv-gold);
+                 letter-spacing: .3em;
+                 font-size: 14px;
+                 text-transform: uppercase;
+             }
+
+                 .rv-eyebrow::before {
+                     content: "";
+                     width: 40px;
+                     height: 1px;
+                     background: var(--rv-gold);
+                 }
+
+             .rv-title {
+                 margin: 22px 0 0;
+                 font-weight: 400;
+                 font-size: clamp(34px, 5.6vw, 70px);
+                 line-height: 1.15;
+                 color: var(--rv-ink);
+             }
+
+                 .rv-title em {
+                     color: var(--rv-gold-soft);
+                     font-style: italic;
+                 }
+
+             .rv-rating {
+                 margin-top: 26px;
+                 color: var(--rv-muted);
+                 letter-spacing: .06em;
+                 font-size: 16px;
+             }
+
+             .rv-stars {
+                 color: var(--rv-gold);
+                 margin-right: 12px;
+                 letter-spacing: .12em;
+             }
+
+             .rv-carousel {
+                 position: relative;
+                 margin-top: 64px;
+             }
+
+             .rv-viewport {
+                 overflow: hidden;
+                 padding: 2px;
+             }
+
+             .rv-track {
+                 display: flex;
+                 gap: 16px;
+                 transition: transform .6s cubic-bezier(.22, .7, .2, 1);
+             }
+
+             .rv-card {
+                 flex: 0 0 calc((100% - 32px) / 3);
+                 background: var(--rv-card);
+                 border: 1px solid #ebebeb;
+                 border-radius: 10px;
+                 padding: 44px 45px 40px;
+                 display: flex;
+                 flex-direction: column;
+                 min-height: 500px;
+             }
+
+             .rv-qm {
+                 font-size: 90px;
+                 line-height: .8;
+                 height: 62px;
+                 color: var(--rv-quote);
+                 font-family: Georgia, serif;
+             }
+
+             .rv-text {
+                 margin: 46px 0 0;
+                 flex: 1;
+                 font-style: italic;
+                 font-size: 20px;
+                 line-height: 2.05;
+                 color: var(--rv-ink);
+             }
+
+             .rv-meta {
+                 border-top: 1px solid var(--rv-line);
+                 padding-top: 32px;
+                 margin-top: 26px;
+                 display: flex;
+                 align-items: center;
+                 gap: 16px;
+             }
+
+             .rv-avatar {
+                 width: 50px;
+                 height: 50px;
+                 border-radius: 50%;
+                 display: grid;
+                 place-items: center;
+                 color: #fff;
+                 font-size: 20px;
+                 flex: none;
+                 font-family: Georgia, serif;
+             }
+
+             .rv-who {
+                 flex: 1;
+                 min-width: 0;
+             }
+
+             .rv-name {
+                 font-size: 18px;
+                 color: var(--rv-ink);
+             }
+
+             .rv-sub {
+                 color: var(--rv-muted);
+                 font-size: 16px;
+                 letter-spacing: .06em;
+                 margin-top: 6px;
+             }
+
+             .rv-cstars {
+                 color: var(--rv-gold);
+                 letter-spacing: .1em;
+                 font-size: 17px;
+             }
+
+             .rv-nav {
+                 display: flex;
+                 justify-content: center;
+                 align-items: center;
+                 gap: 22px;
+                 margin-top: 40px;
+             }
+
+             .rv-btn {
+                 width: 54px;
+                 height: 54px;
+                 border-radius: 50%;
+                 border: 1px solid var(--rv-gold);
+                 background: var(--rv-card);
+                 color: var(--rv-ink);
+                 cursor: pointer;
+                 display: grid;
+                 place-items: center;
+                 padding: 0;
+                 transition: .25s;
+             }
+
+                 .rv-btn:hover:not(:disabled) {
+                     background: var(--rv-gold);
+                     color: #3b2a20;
+                     transform: scale(1.06);
+                 }
+
+                 .rv-btn:disabled {
+                     opacity: .35;
+                     cursor: default;
+                 }
+
+                 .rv-btn svg {
+                     width: 22px;
+                     height: 22px;
+                     stroke: currentColor;
+                     fill: none;
+                     stroke-width: 1.6;
+                     stroke-linecap: round;
+                     stroke-linejoin: round;
+                 }
+
+             .rv-dots {
+                 display: flex;
+                 gap: 10px;
+             }
+
+             .rv-dot {
+                 width: 8px;
+                 height: 8px;
+                 border-radius: 50%;
+                 background: var(--rv-quote);
+                 border: 0;
+                 padding: 0;
+                 cursor: pointer;
+                 transition: .3s;
+             }
+
+                 .rv-dot.on {
+                     background: var(--rv-gold);
+                     width: 26px;
+                     border-radius: 8px;
+                 }
+
+             @media (max-width: 1024px) {
+                 .rv-card {
+                     flex-basis: calc((100% - 16px) / 2);
+                 }
+             }
+
+             @media (max-width: 680px) {
+                 .rv {
+                     padding: 40px 16px 56px;
+                 }
+
+                 .rv-card {
+                     flex-basis: 100%;
+                     padding: 32px 26px;
+                     min-height: 0;
+                 }
+
+                 .rv-text {
+                     font-size: 18px;
+                     margin-top: 28px;
+                 }
+
+                 .rv-meta {
+                     flex-wrap: wrap;
+                 }
+             }
+    </style>
+
+    <section class="rv" id="reviews" aria-label="Đánh giá của khách">
+        <div class="rv-wrap">
+            <header class="rv-head">
+                <div class="rv-eyebrow">Lời khách gửi</div>
+                <h2 class="rv-title">Không cần lời quảng bá —<br><em>trải nghiệm tự nói lên tất cả</em></h2>
+                <div class="rv-rating"><span class="rv-stars">★★★★★</span>4.9 / 5★ · 962 bài đánh giá</div>
+            </header>
+
+            <div class="rv-carousel">
+                <div class="rv-viewport">
+                    <div class="rv-track" id="rv-track">
+                        <article class="rv-card">
+                            <div class="rv-qm" aria-hidden="true">"</div>
+                            <p class="rv-text" style="font-family: 'STHeiti', 'Microsoft YaHei', SimSun, serif; font-weight: bold; font-size: 16px; color: #111; line-height: 1.6;">
+                                下龙湾藏在半山腰的神仙民宿！房东小姐姐中文超级流利，完全没有沟通障碍。落地窗看落日绝美，拍短视频超级出片。还帮我们叫车、换钱、规划行程，下次来下龙湾还要住这里！
+                            </p>
+                            <div class="rv-meta">
+                                <div class="rv-avatar" style="background:#7a1230">L</div>
+                                <div class="rv-who"><div class="rv-name">李佳欣</div><div class="rv-sub">山东，中国· Tháng 3/2026</div></div>
+                                <div class="rv-cstars" aria-label="5 sao">★★★★★</div>
+                            </div>
+                        </article>
+                        <article class="rv-card">
+                            <div class="rv-qm" aria-hidden="true">"</div>
+                            <p class="rv-text">
+                                Gia đình mình thuê căn Heritage Villa có bếp và sân nướng BBQ. Các bé rất thích không gian thoáng đãng nhiều cây xanh. Đặt phòng trực tiếp qua web nhanh gọn, được xác nhận liền rất yên tâm!
+                            </p>
+                            <div class="rv-meta">
+                                <div class="rv-avatar" style="background:#2f4a44">D</div>
+                                <div class="rv-who"><div class="rv-name">Nguyễn Văn Dũng</div><div class="rv-sub">Hà Nội, Việt Nam · Tháng 6/2026</div></div>
+                                <div class="rv-cstars" aria-label="5 sao">★★★★★</div>
+                            </div>
+                        </article>
+                        <article class="rv-card">
+                            <div class="rv-qm" aria-hidden="true">"</div>
+                            <p class="rv-text" style="font-family: 'STHeiti', 'Microsoft YaHei', SimSun, serif; font-weight: bold; font-size: 16px; color: #111; line-height: 1.6;">
+                                我非常喜欢民宿的空间，因为给人一种温馨、干净且私密的感觉。房间布置得很漂亮，非常适合休息和与朋友拍照。便利的地理位置也让我能轻松探索各个游玩地点，并品尝当地特色美食。这绝对是下次去下龙湾旅行时一个非常值得考虑的选择！💚
+                            </p>
+                            <div class="rv-meta">
+                                <div class="rv-avatar" style="background:#8a6a55">L</div>
+                                <div class="rv-who"><div class="rv-name">博文</div><div class="rv-sub">杭州市，中国 · Tháng 4/2026</div></div>
+                                <div class="rv-cstars" aria-label="5 sao">★★★★★</div>
+                            </div>
+                        </article>
+                        <article class="rv-card">
+                            <div class="rv-qm" aria-hidden="true">"</div>
+                            <p class="rv-text">
+                                Đây là một trải nghiệm rất dễ chịu trong chuyến du lịch Hạ Long của mình. Không gian riêng tư, tiện nghi phù hợp và thuận tiện cho việc lên lịch trình vui chơi. Nhất định sẽ cân nhắc quay lại!
+                            </p>
+                            <div class="rv-meta">
+                                <div class="rv-avatar" style="background:#5b4a2e">Q</div>
+                                <div class="rv-who"><div class="rv-name">Quốc Bảo</div><div class="rv-sub">Đà Nẵng, Việt Nam · Tháng 5/2026</div></div>
+                                <div class="rv-cstars" aria-label="5 sao">★★★★★</div>
+                            </div>
+                        </article>
+                        <article class="rv-card">
+                            <div class="rv-qm" aria-hidden="true">"</div>
+                            <p class="rv-text">
+                                Mình thích kiểu du lịch tự túc nên việc tìm được chỗ lưu trú phù hợp rất quan trọng. Homestay là điểm dừng chân lý tưởng để nghỉ ngơi sau một ngày khám phá Hạ Long và thưởng thức các món ngon địa phương
+                            </p>
+                            <div class="rv-meta">
+                                <div class="rv-avatar" style="background:#6b3b4f">H</div>
+                                <div class="rv-who"><div class="rv-name">Quốc Hùng</div><div class="rv-sub">Hà Giang, Việt Nam · Tháng 5/2026</div></div>
+                                <div class="rv-cstars" aria-label="5 sao">★★★★★</div>
+                            </div>
+                        </article>
+                        <article class="rv-card">
+                            <div class="rv-qm" aria-hidden="true">"</div>
+                            <p class="rv-text" style="font-family: 'STHeiti', 'Microsoft YaHei', SimSun, serif; font-weight: bold; font-size: 16px; color: #111; line-height: 1.6;">
+                                我对民宿 l 的期待是舒适的空间和旅途中的便利。这是一种适合那些想按自定行程、无拘无束畅游下龙湾的人的住宿方式。
+                            </p>
+                            <div class="rv-meta">
+                                <div class="rv-avatar" style="background:#3e4a63">H</div>
+                                <div class="rv-who"><div class="rv-name">懿 轩</div><div class="rv-sub">北京，中国 · Tháng 7/2026</div></div>
+                                <div class="rv-cstars" aria-label="5 sao">★★★★★</div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                <div class="rv-nav">
+                    <button class="rv-btn" id="rv-prev" type="button" aria-label="Xem bình luận trước"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7" /></svg></button>
+                    <div class="rv-dots" id="rv-dots"></div>
+                    <button class="rv-btn" id="rv-next" type="button" aria-label="Xem bình luận tiếp theo"><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" /></svg></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <style>
+             /* ==========================================================
+        BANNER ĐẶT PHÒNG HẠ LONG (.hl-*) – nằm giữa Dịch vụ và Footer
+        ========================================================== */
+             .hl-wrap {
+                 padding: 40px 5vw 20px;
+                 background: transparent;
+             }
+
+             .hl-hero {
+                 /* Đổi đường dẫn ảnh nền của banner ở đây */
+                 --hl-image: url("datphong.png");
+                 position: relative;
+                 width: 100%;
+                 max-width: 1000px;
+                 aspect-ratio: 990 / 450;
+                 margin: 0 auto;
+                 border-radius: 6.2cqw;
+                 overflow: hidden;
+                 isolation: isolate;
+                 container-type: inline-size;
+                 /* Dự phòng khi chưa có ảnh */
+                 background-color: #123d2a;
+                 background-image: var(--hl-image), linear-gradient(180deg, #cfd8d6 0%, #5f7f6c 22%, #1d5a3a 45%, #0f3d28 70%, #1b5a3c 100%);
+                 background-size: cover;
+                 background-position: center;
+             }
+
+                 .hl-hero::before {
+                     content: "";
+                     position: absolute;
+                     inset: 0;
+                     z-index: -1;
+                     background: linear-gradient(90deg, rgba(0, 25, 12, .35) 0%, rgba(0, 25, 12, 0) 60%), linear-gradient(0deg, rgba(0, 25, 12, .30) 0%, rgba(0, 25, 12, 0) 45%);
+                     pointer-events: none;
+                 }
+
+             .hl-hero__content {
+                 position: absolute;
+                 left: 7.4cqw;
+                 right: 7cqw;
+                 bottom: 5.6cqw;
+                 display: flex;
+                 flex-direction: column;
+                 align-items: flex-start;
+                 gap: 3.6cqw;
+             }
+
+             .hl-hero__title {
+                 margin: 0;
+                 max-width: 62cqw;
+                 font-family: "Great Vibes", "Snell Roundhand", cursive;
+                 font-weight: 400;
+                 font-size: 5.1cqw;
+                 line-height: 1.7;
+                 color: #fff;
+                 text-shadow: 0 .2cqw 1.2cqw rgba(0, 0, 0, .35);
+             }
+
+             /* Nút liquid glass kiểu iPhone (mờ hơn) */
+             .hl-glass-btn {
+                 position: relative;
+                 display: inline-flex;
+                 align-items: center;
+                 justify-content: center;
+                 padding: 0 3.6cqw;
+                 height: 6.4cqw;
+                 min-height: 40px;
+                 border: 0;
+                 border-radius: 999px;
+                 cursor: pointer;
+                 text-decoration: none;
+                 font-family: "Be Vietnam Pro", system-ui, sans-serif;
+                 font-weight: 700;
+                 font-size: clamp(14px, 2.6cqw, 26px);
+                 letter-spacing: .01em;
+                 color: #0c1a12;
+                 white-space: nowrap;
+                 background: linear-gradient(180deg, rgba(255, 255, 255, .30) 0%, rgba(255, 255, 255, .10) 55%, rgba(255, 255, 255, .20) 100%);
+                 -webkit-backdrop-filter: blur(22px) saturate(180%) brightness(1.08);
+                 backdrop-filter: blur(22px) saturate(180%) brightness(1.08);
+                 box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .38), inset 0 1.5px 1px rgba(255, 255, 255, .70), inset 0 -1.5px 2px rgba(255, 255, 255, .25), inset 0 0 14px rgba(255, 255, 255, .18), 0 8px 24px rgba(0, 20, 10, .28), 0 1px 3px rgba(0, 0, 0, .18);
+                 transition: transform .25s cubic-bezier(.2, .8, .2, 1), box-shadow .25s ease, background .25s ease;
+             }
+
+                 .hl-glass-btn::before {
+                     content: "";
+                     position: absolute;
+                     inset: 0;
+                     border-radius: inherit;
+                     background: linear-gradient(115deg, rgba(255, 255, 255, .45) 0%, rgba(255, 255, 255, 0) 38%, rgba(255, 255, 255, 0) 62%, rgba(255, 255, 255, .30) 100%);
+                     mix-blend-mode: soft-light;
+                     pointer-events: none;
+                 }
+
+                 .hl-glass-btn:hover {
+                     transform: scale(1.04);
+                     background: linear-gradient(180deg, rgba(255, 255, 255, .38) 0%, rgba(255, 255, 255, .14) 55%, rgba(255, 255, 255, .26) 100%);
+                 }
+
+                 .hl-glass-btn:active {
+                     transform: scale(.97);
+                 }
+
+                 .hl-glass-btn:focus-visible {
+                     outline: 3px solid rgba(255, 255, 255, .9);
+                     outline-offset: 3px;
+                 }
+
+             @supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+                 .hl-glass-btn {
+                     background: rgba(235, 240, 237, .75);
+                 }
+             }
+
+             @media (prefers-reduced-motion: reduce) {
+                 .hl-glass-btn {
+                     transition: none;
+                 }
+             }
+
+             @media (max-width: 600px) {
+                 .hl-wrap {
+                     padding: 24px 16px 12px;
+                 }
+
+                 .hl-hero {
+                     border-radius: 8cqw;
+                 }
+
+                 .hl-hero__title {
+                     font-size: 7cqw;
+                     max-width: 82cqw;
+                     line-height: 1.5;
+                 }
+
+                 .hl-hero__content {
+                     left: 6cqw;
+                     bottom: 6cqw;
+                     gap: 4cqw;
+                 }
+
+                 .hl-glass-btn {
+                     height: 11cqw;
+                     padding: 0 6cqw;
+                     font-size: 4cqw;
+                 }
+             }
+    </style>
+
+    <!-- ============ BANNER ĐẶT PHÒNG HẠ LONG (dưới Dịch vụ, trên Footer) ============ -->
+    <section class="hl-wrap" aria-label="Đặt phòng nghỉ dưỡng tại Hạ Long">
+        <div class="hl-hero">
+            <div class="hl-hero__content">
+                <h2 class="hl-hero__title">Tìm chốn nghỉ dưỡng, bắt đầu hành trình tại Hạ Long!</h2>
+                <a class="hl-glass-btn" href="../dat_phong/dat_phong.html">Đặt phòng ngay</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <video class="footer-video" autoplay muted loop playsinline preload="metadata" poster="footer-poster.jpg">
+            <source src="footer-video.mp4" type="video/mp4">
+        </video>
+
+        <div class="footer-inner">
+            <div class="footer-grid">
+
+                <div class="footer-col">
+                    <div class="brand">
+                        <div class="brand-logo" aria-hidden="true">
+                            <img src="logoduan.png" alt="Logo dự án">
+                        </div>
+                        <span class="brand-name">3Hill Homestay</span>
+                    </div>
+                    <p>Chạm nét bình yên giữa vịnh di sản. Mô hình lưu trú chữa lành &amp; cầu nối văn hóa du lịch Việt – Trung tại Hạ Long.</p>
+                    <div class="socials">
+                        <a class="chip tiktok" href="#">TikTok:<br>@3hills_homestay</a>
+                        <a class="chip xhs" href="#">Xiaohongshu:<br>3Hills_Halong</a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Địa chỉ &amp; Vị trí</h4>
+                    <p>📍 Khu Đồi Đặng Bá Hát, P. Hồng Gai, TP. Hạ Long, Tỉnh Quảng Ninh (Gần Cầu Bãi Cháy, ngắm trọn vịnh Cửa Lục).</p>
+                    <p>Chỉ 5 phút ra bến tàu Hòn Gai, 7 phút sang bãi tắm Bãi Cháy và khu chợ đêm sầm uất.</p>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Liên hệ đặt phòng</h4>
+                    <ul class="contact-list">
+                        <li>📞 Hotline/Zalo: <a href="tel:0912345678">0912 345 678</a></li>
+                        <li>💬 WeChat ID: <strong>ThreeHills_Halong</strong></li>
+                        <li>✉️ Email: <a href="mailto:booking@3hillshomestay.vn">booking@3hillshomestay.vn</a></li>
+                        <li>⏰ Thời gian phục vụ lễ tân: 07:00 - 23:00 hàng ngày</li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Dành cho chủ homestay</h4>
+                    <p>Đăng nhập bảng điều khiển nội bộ để theo dõi booking, duyệt phòng, và quản lý doanh thu - chi phí.</p>
+                    <a class="admin-btn" href="../dat_phong/trang_quan_tri.html">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2" /><path d="M8 11V7a4 4 0 0 1 8 0v4" /></svg>
+                        Trang quản trị đặt phòng
+                    </a>
+                    <a class="admin-btn" href="../Photo_Walk/trang_quan_tri_photo_walk.html">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2" /><path d="M8 11V7a4 4 0 0 1 8 0v4" /></svg>
+                        Trang quản trị đặt Photo Walk
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+                © 2026 3Hills Homestay Hạ Long. Tất cả quyền được bảo lưu.
+            </div>
+        </div>
+    </footer>
+    <script>
+                    (() => {
+                      'use strict';
+
+                      const hero    = document.getElementById('hero');
+                      const header  = document.getElementById('header');
+                      const win     = document.getElementById('window');
+                      const overlay = document.getElementById('overlay');
+                      const bigtext = document.getElementById('bigtext');
+                      const cards   = [...document.querySelectorAll('.card')].map(el => ({
+                        el,
+                        s0:     +el.dataset.s0,
+                        kx:     +el.dataset.kx,
+                        ky:     +el.dataset.ky,
+                        ks:     +el.dataset.ks,
+                        appear: +el.dataset.appear
+                      }));
+
+                      /* bản sao chữ trắng, chỉ hiện bên trong khung ảnh */
+                      const light = overlay.cloneNode(true);
+                      light.removeAttribute('id');
+                      light.classList.add('overlay--light');
+                      light.setAttribute('aria-hidden', 'true');
+                      light.querySelectorAll('h1').forEach(h => h.outerHTML = h.outerHTML.replace(/^<h1/, '<div').replace(/h1>$/, 'div>'));
+                      overlay.after(light);
+
+                      const PIN  = 75;                      // (vh) tiến độ hiệu ứng: 0 -> 75
+                      const SLOW = 2.5;                     // hệ số làm chậm: cuộn 1vh chỉ đẩy hiệu ứng 1/SLOW vh
+                      document.documentElement.style.setProperty('--hero-slow', SLOW);   // hero.height = 100vh + 75vh x SLOW
+
+                      /* Keyframes của khung ảnh: s = lượng cuộn (vh); l/t/r/b = inset (vw / vh) */
+                      const KF = [
+                        { s: 0,    l: 0,    t: 0,    r: 0,    b: 0,    rad: 0 },
+                        { s: 8.6,  l: 10.8, t: 6.8,  r: 11.1, b: 6.7,  rad: 4 },
+                        { s: 26,   l: 33.2, t: 20.5, r: 33.5, b: 20.5, rad: 6 },
+                        { s: 38,   l: 37.0, t: 22.8, r: 37.3, b: 22.8, rad: 6 },
+                        { s: 62,   l: 39.4, t: 24.3, r: 39.6, b: 24.3, rad: 6 },
+                        { s: 75,   l: 40.1, t: 24.7, r: 40.3, b: 24.7, rad: 6 }
+                      ];
+
+                      const clamp = (v, a, b) => Math.min(b, Math.max(a, v));
+                      const lerp  = (a, b, t) => a + (b - a) * t;
+
+                      function frameAt(s) {
+                        s = clamp(s, 0, PIN);
+                        for (let i = 1; i < KF.length; i++) {
+                          if (s <= KF[i].s) {
+                            const a = KF[i - 1], b = KF[i];
+                            const t = (s - a.s) / (b.s - a.s);
+                            return {
+                              l: lerp(a.l, b.l, t), t: lerp(a.t, b.t, t),
+                              r: lerp(a.r, b.r, t), b: lerp(a.b, b.b, t),
+                              rad: lerp(a.rad, b.rad, t)
+                            };
+                          }
+                        }
+                        return KF[KF.length - 1];
+                      }
+
+                      /* ---------- Chữ "AVENUE FORWARD" trôi liên tục sang trái ---------- */
+                      // Số đo từ video gốc 1840×964: cap-height 191px, baseline y=578,
+                      // chữ F bắt đầu x=664 lúc t=0, tốc độ trôi ≈ 15.5px/giây.
+                      const IMG_W = 1840, IMG_H = 964;
+                      const SRC = { cap: 191, baseline: 578, fLeft: 664, speed: 15.5 };
+                      const UNIT = 'YOUR BRAND\u00A0NAME';
+                      const glass = document.getElementById('glasstext');
+                      const M = { k: 1, unitW: 1, offsetA: 0, left0: 0, ready: false };
+
+                      function buildText(el) {
+                        el.innerHTML = '';
+                        for (let i = 0; i < 4; i++) {
+                          const u = document.createElement('span');
+                          u.className = 'bt-unit';
+                          u.textContent = UNIT;
+                          el.appendChild(u);
+                        }
+                      }
+                      buildText(bigtext); buildText(glass);
+
+                      function fitBigText() {
+                        const W = window.innerWidth, H = window.innerHeight;
+                        const k  = Math.max(W / IMG_W, H / IMG_H);          // object-fit: cover
+                        const x0 = (W - IMG_W * k) / 2;
+                        const y0 = (H - IMG_H * k) / 2;
+
+                        const cs  = getComputedStyle(bigtext);
+                        const ctx = document.createElement('canvas').getContext('2d');
+                        ctx.font  = `${cs.fontWeight} 100px ${cs.fontFamily}`;
+                        const capRatio = (ctx.measureText('H').actualBoundingBoxAscent || 70) / 100;
+                        const mA  = ctx.measureText('YOUR BRAND');
+                        const fA  = (mA.fontBoundingBoxAscent  || 100) / 100;
+                        const fD  = (mA.fontBoundingBoxDescent || 26)  / 100;
+
+                        const fs = (SRC.cap * k) / capRatio;                 // cap-height khớp bản gốc
+                        [bigtext, glass].forEach(el => el.style.fontSize = fs + 'px');
+
+                        const unit  = bigtext.querySelector('.bt-unit');
+                        M.unitW  = unit.getBoundingClientRect().width;
+                        M.offsetA = ctx.measureText('YOUR BRAND\u00A0').width / 100 * fs;   // rộng "AVENUE "
+
+                        const baselineInBox = ((1 - (fA + fD)) / 2 + fA) * fs;          // line-height: 1
+                        const top = y0 + SRC.baseline * k - baselineInBox;
+                        [bigtext, glass].forEach(el => el.style.top = top + 'px');
+
+                        M.k = k;
+                        M.left0 = x0 + SRC.fLeft * k - M.offsetA;
+                        M.ready = true;
+                        bigtext.classList.add('is-ready');
+                        glass.classList.add('is-ready');
+                      }
+
+                      const t0 = performance.now();
+                      function marquee(now) {
+                        if (M.ready) {
+                          const shift = ((now - t0) / 1000 * SRC.speed * M.k) % M.unitW;
+                          const left  = (M.left0 - shift) - M.unitW;         // luôn phủ kín 2 phía
+                          bigtext.style.left = left + 'px';
+                          glass.style.left   = left + 'px';
+                        }
+                        requestAnimationFrame(marquee);
+                      }
+                      requestAnimationFrame(marquee);
+
+                      /* ---------- Render theo lượng cuộn ---------- */
+                      let target = 0, current = 0, raf = null;
+
+                      function render(s) {
+                        const f = frameAt(s);
+
+                        // 1) cửa sổ ảnh
+                        win.style.clipPath =
+                          `inset(${f.t}vh ${f.r}vw ${f.b}vh ${f.l}vw round ${f.rad}px)`;
+
+                        // 2) các thẻ ảnh
+                        for (const c of cards) {
+                          const u  = clamp((s - c.s0) / (PIN - c.s0), 0, 1);
+                          const e  = Math.pow(1 - u, 3);                     // ease-out cubic
+                          const sc = 1 + c.ks * e;
+                          c.el.style.transform =
+                            `translate3d(${c.kx * e}vw, ${c.ky * e}vh, 0) scale(${sc})`;
+                          c.el.style.opacity = clamp((s - c.appear) / 3, 0, 1);
+                        }
+
+                        // 3) lớp chữ trắng cắt theo khung ảnh (toạ độ theo tài liệu)
+                        const V = window.innerHeight, W = window.innerWidth;
+                        const H = hero.offsetHeight;
+                        const pinOff = Math.min(window.scrollY, PIN * SLOW / 100 * V);
+                        const top    = f.t / 100 * V + pinOff;
+                        const bottom = H - (pinOff + V - f.b / 100 * V);
+                        const left   = f.l / 100 * W;
+                        const right  = f.r / 100 * W;
+                        light.style.clipPath =
+                          `inset(${top}px ${right}px ${bottom}px ${left}px round ${f.rad}px)`;
+                      }
+
+                      function tick() {
+                        const diff = target - current;
+                        if (Math.abs(diff) < 0.005) {
+                          current = target;
+                          render(current);
+                          raf = null;
+                          return;
+                        }
+                        current += diff * 0.08;                              // quán tính → chuyển động mượt, trôi êm
+                        render(current);
+                        raf = requestAnimationFrame(tick);
+                      }
+
+                      function onScroll() {
+                        const y = window.scrollY;
+                        target = clamp(y / window.innerHeight * 100 / SLOW, 0, PIN);
+                        header.classList.toggle('is-scrolled', y > 8);
+                        if (!raf) raf = requestAnimationFrame(tick);
+                        // chữ trắng phải bám theo cuộn thật ngay lập tức
+                        render(current);
+                      }
+
+                      function onResize() {
+                        fitBigText();
+                        onScroll();
+                      }
+
+                      window.addEventListener('scroll', onScroll, { passive: true });
+                      window.addEventListener('resize', onResize);
+
+                      // khởi tạo (đợi font tải xong để đo chữ chính xác)
+                      render(0);
+                      header.classList.toggle('is-scrolled', window.scrollY > 8);
+                      fitBigText();
+                      if (document.fonts && document.fonts.ready) {
+                        document.fonts.ready.then(() => { fitBigText(); onScroll(); });
+                      }
+                      // giữ vị trí nếu tải lại khi đã cuộn
+                      current = target = clamp(window.scrollY / window.innerHeight * 100 / SLOW, 0, PIN);
+                      render(current);
+                    })();
+                        //thanh nav bar
+                        (() => {
+                            const bar = document.querySelector('#nb-10-bar');
+                            const pill = document.querySelector('#nb-10-pill');
+                            if (!bar || !pill) return;
+                            const links = [...bar.querySelectorAll('.nb-10__link')];
+                            let active = links.find(l => l.hasAttribute('aria-current')) || links[0];
+                            function move(el) {
+                                const b = bar.getBoundingClientRect(), r = el.getBoundingClientRect();
+                                pill.style.left = (r.left - b.left) + 'px';
+                                pill.style.width = r.width + 'px';
+                            }
+                            links.forEach(l => {
+                                l.addEventListener('pointerenter', () => move(l));
+                                l.addEventListener('focus', () => move(l));
+                                /* Đã bỏ e.preventDefault() để link chuyển trang bình thường */
+                            });
+                            bar.addEventListener('pointerleave', () => move(active));
+                            requestAnimationFrame(() => move(active));
+                            addEventListener('resize', () => move(active));
+                        })();
+    </script>
+    <script>
+/* Services – 4 thẻ cuộn chồng (nằm dưới hero)
+                       Nếu có lỗi, trang tự quay về dạng 4 thẻ xếp dọc (không bị trắng) và báo lỗi trong Console (F12). */
+(() => {
+                    const root = document.getElementById('svc');
+                    if (!root) { console.error('[svc] Không tìm thấy #svc trong home.html'); return; }
+                    const cards = [...root.querySelectorAll('.svc-card')];
+                    const N = cards.length;
+                    if (!N) { console.error('[svc] Không có thẻ .svc-card nào trong #svc'); return; }
+
+                    let vh = innerHeight, top0 = 0, current = 0, target = 0, raf = null;
+                    const clamp = (v, a, b) => Math.min(b, Math.max(a, v));
+                    const ease  = x => 1 - Math.pow(1 - x, 1.6);
+
+                    const measure = () => {
+                      vh = innerHeight;
+                      root.style.height = (N * vh) + 'px';           // mỗi thẻ = 1 màn hình cuộn
+                      top0 = root.getBoundingClientRect().top + scrollY;
+                    };
+
+                    const render = t => {
+                      cards.forEach((card, i) => {
+                        const enter = i === 0 ? 1 : clamp(t - (i - 1), 0, 1);   // đang trượt lên
+                        const leave = clamp(t - i, 0, 1);                        // bị thẻ sau che
+                        const y = (1 - ease(enter)) * (vh * 0.87 + 40);
+                        card.style.transform = `translate3d(0,${y}px,0) scale(${1 - 0.05 * leave})`;
+                        card.style.opacity = leave >= 1 ? 0 : 1 - leave * 0.92;
+                        card.style.filter = leave > 0.001 ? `blur(${(leave * 7).toFixed(2)}px)` : 'none';
+                        card.style.zIndex = i + 1;
+                        card.style.pointerEvents = enter >= 1 && leave < 0.5 ? 'auto' : 'none';
+                        card.style.visibility = enter <= 0 || leave >= 1 ? 'hidden' : 'visible';
+                      });
+                    };
+
+                    const loop = () => {
+                      current += (target - current) * 0.12;
+                      if (Math.abs(target - current) < 0.0005) current = target;
+                      render(current);
+                      raf = current !== target ? requestAnimationFrame(loop) : null;
+                    };
+
+                    const onScroll = () => {
+                      target = clamp((scrollY - top0) / vh, 0, N - 1);
+                      if (!raf) raf = requestAnimationFrame(loop);
+                    };
+
+                    // tạo 4 nút Y cho từng thẻ (thiếu <nav class="svc-dots"> thì bỏ qua, không làm hỏng hiệu ứng)
+                    const buildDots = () => cards.forEach((card, ci) => {
+                      const nav = card.querySelector('.svc-dots');
+                      if (!nav || nav.children.length) return;
+                      for (let i = 0; i < N; i++) {
+                        const b = document.createElement('button');
+                        b.type = 'button';
+                        b.setAttribute('aria-label', 'Go to slide ' + (i + 1));
+                        b.innerHTML = '<svg viewBox="0 0 24 24"><use href="#svc-y"/></svg>';
+                        if (i === ci) b.classList.add('on');
+                        b.addEventListener('click', () => scrollTo({ top: top0 + i * vh, behavior: 'smooth' }));
+                        nav.appendChild(b);
+                      }
+                    });
+
+                    const fallback = err => {                         // lỗi -> trả về dạng xếp dọc, thẻ vẫn hiện
+                      console.error('[svc] Hiệu ứng thẻ đè bị lỗi, chuyển sang dạng xếp dọc:', err);
+                      root.classList.add('is-static');
+                      root.style.height = '';
+                      cards.forEach(c => c.removeAttribute('style'));
+                    };
+
+                    try {
+                      try { buildDots(); } catch (e) { console.warn('[svc] Không tạo được nút Y:', e); }
+                      measure();
+                      target = current = clamp((scrollY - top0) / vh, 0, N - 1);
+                      render(current);
+                      onScroll();
+
+                      addEventListener('scroll', () => { try { onScroll(); } catch (e) { fallback(e); } }, { passive: true });
+                      addEventListener('resize', () => { try { measure(); onScroll(); } catch (e) { fallback(e); } });
+                      addEventListener('load',   () => { try { measure(); onScroll(); } catch (e) { fallback(e); } });
+                    } catch (e) {
+                      fallback(e);
+                    }
+})();
+    </script>
+    <script>
+        /*Thanh cuộn tùy chỉnh*/
+window.addEventListener('scroll', () => {
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+
+    if (docHeight > 0) {
+        const scrollPercent = scrollTop / docHeight;
+        const track = document.querySelector('.custom-scrollbar-track');
+        const thumb = document.getElementById('scrollThumb');
+
+        const maxTranslate = track.clientHeight - thumb.clientHeight;
+        const translateY = scrollPercent * maxTranslate;
+
+        thumb.style.transform = `translateY(${translateY}px)`;
+    }
+});
+/* Đánh giá của khách hàng*/
+(() => {
+          const track = document.getElementById('rv-track');
+          if (!track) return;
+          const cards = [...track.children];
+          const prev = document.getElementById('rv-prev');
+          const next = document.getElementById('rv-next');
+          const dotsEl = document.getElementById('rv-dots');
+          const GAP = 16;
+          let index = 0;
+
+          const perView = () => innerWidth <= 680 ? 1 : innerWidth <= 1024 ? 2 : 3;
+          const maxIndex = () => Math.max(0, cards.length - perView());
+
+          function renderDots() {
+            dotsEl.innerHTML = '';
+            for (let i = 0; i <= maxIndex(); i++) {
+              const d = document.createElement('button');
+              d.type = 'button';
+              d.className = 'rv-dot' + (i === index ? ' on' : '');
+              d.setAttribute('aria-label', 'Trang ' + (i + 1));
+              d.onclick = () => { index = i; update(); };
+              dotsEl.appendChild(d);
+            }
+          }
+          function update() {
+            index = Math.min(index, maxIndex());
+            const step = cards[0].getBoundingClientRect().width + GAP;
+            track.style.transform = `translateX(${-index * step}px)`;
+            prev.disabled = index === 0;
+            next.disabled = index === maxIndex();
+            renderDots();
+          }
+          prev.onclick = () => { index = Math.max(0, index - 1); update(); };
+          next.onclick = () => { index = Math.min(maxIndex(), index + 1); update(); };
+          addEventListener('resize', update);
+
+          let sx = null;
+          track.addEventListener('touchstart', e => sx = e.touches[0].clientX, { passive: true });
+          track.addEventListener('touchend', e => {
+            if (sx === null) return;
+            const dx = e.changedTouches[0].clientX - sx;
+            if (Math.abs(dx) > 50) (dx < 0 ? next : prev).click();
+            sx = null;
+          });
+          update();
+})();
+    </script>
+<!-- ============ KIỂM TRA PHÒNG TRỐNG: pop-up kính lỏng ============ -->
+<style>
+.av-ov
+{
+  position:fixed;
+  inset:0;
+  z-index:100000;
+  display:none;
+  align-items:center;
+  justify-content:center;
+  padding:max(16px,env(safe-area-inset-top)) 16px max(16px,env(safe-area-inset-bottom));
+  background:radial-gradient(1200px 700px at 50% 30%,rgba(255,196,140,.28),rgba(8,24,28,.62));-webkit-backdrop-filter:blur(10px) saturate(140%);backdrop-filter:blur(10px) saturate(140%);opacity:0;transition:opacity .28s ease}
+.av-ov.on{display:flex}.av-ov.show{opacity:1}
+.av-card{position:relative;width:min(720px,100%);max-height:min(86vh,820px);display:flex;flex-direction:column;color:#fff;border-radius:34px;overflow:hidden;
+  background:linear-gradient(145deg,rgba(255,255,255,.30),rgba(255,255,255,.08) 46%,rgba(255,255,255,.16));
+  background-color:rgba(14,34,38,.30);background-blend-mode:normal;
+  -webkit-backdrop-filter:blur(34px) saturate(190%) brightness(1.06);backdrop-filter:blur(34px) saturate(190%) brightness(1.06);
+  border:1px solid rgba(255,255,255,.42);
+  box-shadow:0 40px 90px -20px rgba(0,0,0,.55),0 8px 24px rgba(0,0,0,.18),inset 0 1.5px 0 rgba(255,255,255,.75),inset 0 -1.5px 0 rgba(255,255,255,.18),inset 0 0 38px rgba(255,255,255,.10);
+  transform:translateY(22px) scale(.96);transition:transform .38s cubic-bezier(.2,.9,.25,1.1)}
+.av-ov.show .av-card{transform:none}
+.av-card::before{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;z-index:0;
+  background:radial-gradient(120% 60% at 18% -8%,rgba(255,255,255,.55),transparent 55%),radial-gradient(80% 50% at 100% 110%,rgba(255,210,160,.30),transparent 60%)}
+.av-card>*{position:relative;z-index:1}
+.av-hd{padding:26px 30px 14px;display:flex;gap:16px;align-items:flex-start;justify-content:space-between}
+.av-hd h2{margin:0;font:700 26px/1.15 'Playfair Display',serif;letter-spacing:.2px;text-shadow:0 1px 12px rgba(0,0,0,.25)}
+.av-hd p{margin:6px 0 0;font:500 14px/1.4 'Plus Jakarta Sans','Be Vietnam Pro',system-ui,sans-serif;opacity:.9}
+.av-x{flex:none;width:40px;height:40px;border-radius:50%;border:1px solid rgba(255,255,255,.5);color:#fff;font-size:20px;line-height:1;cursor:pointer;
+  background:linear-gradient(145deg,rgba(255,255,255,.35),rgba(255,255,255,.1));box-shadow:inset 0 1px 0 rgba(255,255,255,.7),0 4px 14px rgba(0,0,0,.18);transition:transform .2s}
+.av-x:hover{transform:scale(1.08) rotate(90deg)}
+.av-bd{padding:6px 30px 8px;overflow:auto;font:500 14px/1.5 'Plus Jakarta Sans','Be Vietnam Pro',system-ui,sans-serif;scrollbar-width:thin;scrollbar-color:rgba(255,255,255,.5) transparent}
+.av-msg{padding:26px 6px 30px;text-align:center;font-size:15px}
+.av-sp{width:34px;height:34px;margin:0 auto 12px;border-radius:50%;border:3px solid rgba(255,255,255,.35);border-top-color:#fff;animation:avsp .8s linear infinite}
+@keyframes avsp{to{transform:rotate(360deg)}}
+.av-rooms{display:grid;gap:12px;margin:8px 0 14px}
+.av-room{padding:16px 18px;border-radius:22px;border:1px solid rgba(255,255,255,.34);background:linear-gradient(145deg,rgba(255,255,255,.20),rgba(255,255,255,.05));box-shadow:inset 0 1px 0 rgba(255,255,255,.5)}
+.av-room.sel{border-color:rgba(255,255,255,.8);box-shadow:inset 0 1px 0 rgba(255,255,255,.8),0 0 0 3px rgba(255,214,160,.35),0 10px 30px rgba(0,0,0,.16)}
+.av-top{display:flex;gap:10px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.av-name{font:700 17px 'Playfair Display',serif}
+.av-chip{display:inline-flex;align-items:center;gap:6px;padding:5px 12px;border-radius:999px;font-weight:700;font-size:12.5px;border:1px solid rgba(255,255,255,.55);box-shadow:inset 0 1px 0 rgba(255,255,255,.6)}
+.av-chip.ok{background:linear-gradient(145deg,rgba(120,230,170,.55),rgba(40,160,100,.35))}
+.av-chip.no{background:linear-gradient(145deg,rgba(255,140,120,.6),rgba(190,60,50,.4))}
+.av-sub{margin-top:8px;font-size:13.5px;opacity:.95;display:flex;flex-wrap:wrap;gap:4px 18px}
+.av-sub b{font-weight:700}
+.av-h3{margin:16px 0 8px;font:700 15px 'Plus Jakarta Sans','Be Vietnam Pro',sans-serif;letter-spacing:.3px}
+.av-bk{padding:14px 16px;border-radius:20px;margin-bottom:10px;border:1px solid rgba(255,255,255,.34);background:linear-gradient(145deg,rgba(255,255,255,.16),rgba(255,255,255,.04))}
+.av-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px 18px;margin-top:8px;font-size:13px}
+.av-grid span{display:block;opacity:.78;font-size:11.5px;text-transform:uppercase;letter-spacing:.5px}
+.av-grid b{display:block;word-break:break-word}
+.av-note{margin:6px 0 4px;padding:12px 14px;border-radius:16px;font-size:13px;background:rgba(255,255,255,.12);border:1px dashed rgba(255,255,255,.45)}
+.av-note a{color:#fff;font-weight:700;text-underline-offset:3px}
+.av-ft{padding:14px 30px 24px;display:flex;gap:12px;justify-content:flex-end;flex-wrap:wrap}
+.av-btn{appearance:none;cursor:pointer;border-radius:999px;padding:13px 24px;font:700 14.5px 'Plus Jakarta Sans','Be Vietnam Pro',sans-serif;color:#fff;text-decoration:none;border:1px solid rgba(255,255,255,.6);
+  background:linear-gradient(145deg,rgba(255,255,255,.34),rgba(255,255,255,.10));box-shadow:inset 0 1.5px 0 rgba(255,255,255,.8),0 8px 22px rgba(0,0,0,.2);transition:transform .2s,box-shadow .2s}
+.av-btn:hover{transform:translateY(-2px)}
+.av-btn.pri{background:linear-gradient(145deg,rgba(255,160,90,.85),rgba(190,80,20,.75))}
+.av-btn[aria-disabled=true]{opacity:.45;pointer-events:none}
+@media (max-width:560px){.av-hd,.av-bd,.av-ft{padding-left:18px;padding-right:18px}.av-grid{grid-template-columns:1fr}.av-card{border-radius:26px}}
+@media (prefers-reduced-motion:reduce){.av-ov,.av-card,.av-x,.av-btn{transition:none}.av-sp{animation-duration:2s}}
+@supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){.av-card{background:rgba(20,44,48,.92)}}
+</style>
+
+<div class="av-ov" id="av-ov" aria-hidden="true">
+  <div class="av-card" role="dialog" aria-modal="true" aria-labelledby="av-t">
+    <div class="av-hd">
+      <div><h2 id="av-t"></h2><p id="av-s"></p></div>
+      <button type="button" class="av-x" id="av-x" aria-label="Đóng">&times;</button>
+    </div>
+    <div class="av-bd" id="av-bd" aria-live="polite"></div>
+    <div class="av-ft"><button type="button" class="av-btn" id="av-close">Đóng</button><a class="av-btn pri" id="av-go" href="#">Tiếp tục đặt phòng</a></div>
+  </div>
+</div>
+
+<script>
+(function(){
+  var L={"title": "Kết quả kiểm tra phòng", "all": "Tất cả hạng phòng", "nights": "đêm", "night": "đêm", "free": "Còn phòng", "full": "Hết phòng", "est": "Tạm tính", "busyOn": "Đã kín", "alt": "Hạng phòng khác còn trống trong thời gian này:", "noAlt": "Rất tiếc, tất cả hạng phòng đều đã kín trong thời gian này. Vui lòng chọn ngày khác.", "loading": "Đang kiểm tra phòng trống…", "needDates": "Vui lòng chọn ngày nhận phòng và ngày trả phòng.", "badOrder": "Ngày trả phòng phải sau ngày nhận phòng.", "tooLong": "Chỉ kiểm tra tối đa 30 đêm mỗi lần.", "past": "Ngày nhận phòng không được ở quá khứ.", "busy": "Bạn thao tác quá nhanh, vui lòng đợi ít phút", "fail": "Không kiểm tra được, vui lòng thử lại.", "guestsTitle": "Khách hàng trùng thời gian (dữ liệu trang quản trị)", "noGuests": "Chưa có đơn nào trong khoảng thời gian này.", "code": "Mã đơn", "phone": "Số điện thoại", "room": "Hạng phòng", "stay": "Thời gian lưu trú", "guests": "Số khách", "pay": "Thanh toán", "total": "Tổng đơn", "due": "Cần thanh toán", "svc": "Dịch vụ thêm", "adminNote": "Thông tin khách hàng chỉ hiển thị cho quản trị viên đã đăng nhập.", "adminLink": "Đăng nhập quản trị", "adminUrl": "../dat_phong/trang_quan_tri.html", "st": {"Pending": "Chờ xác nhận", "Confirmed": "Đã nhận tiền", "CheckedIn": "Đã nhận phòng", "Completed": "Hoàn tất", "Cancelled": "Đã hủy"}, "pl": {"deposit": "Đặt cọc 30%", "prepaid": "Trả trước 100%", "postpaid": "Trả sau"}, "mt": {"bank": "Ngân hàng", "momo": "MoMo", "alipay": "Alipay/WeChat", "cash": "Tiền mặt", "card": "Thẻ"}, "rates": {"GROVE by MAY5": 400000, "Bay View Suite": 1150000, "Heritage Family Villa": 1850000, "Hillside Deluxe": 750000}, "cur": "VND", "bookUrl": "../dat_phong/dat_phong.html"};
+  var $=function(i){return document.getElementById(i)};
+  var inE=$('bk-in'),outE=$('bk-out'),roomE=$('bk-room'),btn=document.querySelector('#booking .bk-btn');
+  if(!inE||!outE||!roomE||!btn)return;
+  var ov=$('av-ov'),bd=$('av-bd'),go=$('av-go'),last=null,seq=0;
+  $('av-t').textContent=L.title;
+  var iso=function(d){return new Date(d.getTime()-d.getTimezoneOffset()*6e4).toISOString().slice(0,10)};
+  var dayN=function(s){var p=s.split('-');return Date.UTC(+p[0],+p[1]-1,+p[2])/864e5};
+  var addDays=function(s,k){var p=s.split('-');return new Date(Date.UTC(+p[0],+p[1]-1,+p[2]+k)).toISOString().slice(0,10)};
+  var dmy=function(s){var p=String(s).split('-');return p.length===3?p[2]+'/'+p[1]+'/'+p[0]:s};
+  var money=function(n,cur){return cur==='CNY'?'¥'+n.toLocaleString('zh-CN',{minimumFractionDigits:2,maximumFractionDigits:2}):Math.round(n).toLocaleString('vi-VN')+'đ'};
+  var esc=function(s){var d=document.createElement('div');d.textContent=s==null?'':String(s);return d.innerHTML};
+  inE.min=iso(new Date());
+  inE.addEventListener('change',function(){
+    if(!inE.value)return;outE.min=addDays(inE.value,1);
+    if(!outE.value||dayN(outE.value)<=dayN(inE.value))outE.value=addDays(inE.value,1);
+  });
+
+  function open(){last=document.activeElement;ov.classList.add('on');ov.setAttribute('aria-hidden','false');
+    requestAnimationFrame(function(){ov.classList.add('show');$('av-x').focus()});document.documentElement.style.overflow='hidden'}
+  function close(){ov.classList.remove('show');ov.setAttribute('aria-hidden','true');document.documentElement.style.overflow='';
+    setTimeout(function(){ov.classList.remove('on')},280);if(last&&last.focus)last.focus()}
+  $('av-x').onclick=$('av-close').onclick=close;
+  ov.addEventListener('mousedown',function(e){if(e.target===ov)close()});
+  document.addEventListener('keydown',function(e){if(ov.classList.contains('on')&&e.key==='Escape')close()});
+  function goLink(room,cin,cout,on){
+    go.setAttribute('aria-disabled',on?'false':'true');
+    go.href=on?L.bookUrl+'?room='+encodeURIComponent(room)+'&in='+cin+'&out='+cout:'#';
+  }
+  function msg(t,spin){bd.innerHTML='<div class="av-msg">'+(spin?'<div class="av-sp"></div>':'')+esc(t)+'</div>'}
+
+  btn.addEventListener('click',function(){
+    var cin=inE.value,cout=outE.value,room=roomE.value,n;
+    $('av-s').textContent='';goLink('','','',false);open();
+    if(!cin||!cout){msg(L.needDates);return}
+    n=dayN(cout)-dayN(cin);
+    if(n<1){msg(L.badOrder);return}
+    if(n>30){msg(L.tooLong);return}
+    if(cin<iso(new Date())){msg(L.past);return}
+    $('av-s').textContent=dmy(cin)+' → '+dmy(cout)+' · '+n+' '+L.nights+' · '+(room||L.all);
+    msg(L.loading,true);
+    var my=++seq;
+    fetch('/api/availability?in='+cin+'&out='+cout,{credentials:'same-origin',cache:'no-store'})
+      .then(function(r){return r.json().catch(function(){return{}}).then(function(j){if(!r.ok)throw new Error(r.status===429?L.busy:(j.error||('HTTP '+r.status)));return j})})
+      .then(function(j){if(my===seq)render(j,room,cin,cout,n)})
+      .catch(function(e){if(my===seq)msg(L.fail+(e.message?' ('+e.message+')':''))});
+  });
+
+  function render(j,sel,cin,cout,n){
+    var rooms=j.rooms.slice().sort(function(a,b){return (b.room===sel)-(a.room===sel)}),h='<div class="av-rooms">',firstFree=null,selRoom=null;
+    rooms.forEach(function(r){
+      if(r.available&&!firstFree)firstFree=r.room;
+      if(r.room===sel)selRoom=r;
+      var rate=L.rates[r.room]||r.rate,cur=L.cur;
+      h+='<div class="av-room'+(r.room===sel?' sel':'')+'"><div class="av-top"><span class="av-name">'+esc(r.room)+'</span>'+
+        '<span class="av-chip '+(r.available?'ok':'no')+'">'+(r.available?'✓ '+L.free:'✕ '+L.full)+'</span></div>'+
+        '<div class="av-sub"><span>'+money(rate,cur)+' / '+L.night+'</span><span>'+L.est+': <b>'+money(rate*n,cur)+'</b></span>'+
+        (r.available?'':'<span>'+L.busyOn+': '+r.conflicts.map(function(c){return dmy(c.in)+' → '+dmy(c.out)}).join(', ')+'</span>')+'</div></div>';
+    });
+    h+='</div>';
+    if(sel&&selRoom&&!selRoom.available){
+      var alt=rooms.filter(function(r){return r.available}).map(function(r){return r.room});
+      h+='<div class="av-note">'+(alt.length?L.alt+' <b>'+alt.map(esc).join(', ')+'</b>.':L.noAlt)+'</div>';
+    }
+    /* Khách hàng khớp (chỉ admin đã đăng nhập mới thấy) */
+    var list=(j.bookings||[]).filter(function(b){return !sel||b.room===sel});
+    if(j.admin){
+      h+='<div class="av-h3">'+L.guestsTitle+' ('+list.length+')</div>';
+      if(!list.length)h+='<div class="av-note">'+L.noGuests+'</div>';
+      list.forEach(function(b){
+        h+='<div class="av-bk"><div class="av-top"><span class="av-name">'+esc(b.name)+'</span><span class="av-chip '+(b.status==='Cancelled'?'no':'ok')+'">'+esc(L.st[b.status]||b.status)+'</span></div><div class="av-grid">'+
+          '<div><span>'+L.code+'</span><b>'+esc(b.code)+'</b></div><div><span>'+L.phone+'</span><b>'+esc(b.phone||'—')+'</b></div>'+
+          '<div><span>'+L.room+'</span><b>'+esc(b.room)+'</b></div><div><span>'+L.stay+'</span><b>'+dmy(b.check_in)+' → '+dmy(b.check_out)+' ('+b.nights+' '+L.nights+')</b></div>'+
+          '<div><span>'+L.guests+'</span><b>'+esc(b.guests||'—')+'</b></div><div><span>'+L.pay+'</span><b>'+esc(L.pl[b.policy]||b.policy)+' · '+esc(L.mt[b.method]||b.method)+'</b></div>'+
+          '<div><span>'+L.total+'</span><b>'+money(b.total,b.currency)+'</b></div><div><span>'+L.due+'</span><b>'+money(b.due,b.currency)+'</b></div>'+
+          (b.services?'<div style="grid-column:1/-1"><span>'+L.svc+'</span><b>'+esc(b.services)+'</b></div>':'')+'</div></div>';
+      });
+    }else{
+      h+='<div class="av-note">'+L.adminNote+' <a href="'+L.adminUrl+'">'+L.adminLink+'</a></div>';
+    }
+    bd.innerHTML=h;
+    var target=sel&&selRoom&&selRoom.available?sel:(!sel?firstFree:null);
+    goLink(target||'',cin,cout,!!target);
+  }
+})();
+</script>
+    <script>
+        /* Dropdown "Dịch vụ": hover trên máy tính, bấm để mở/đóng trên điện thoại */
+        (() => {
+            const dd = document.querySelector('.svc-dd');
+            if (!dd) return;
+            const btn = dd.querySelector('button');
+            btn.setAttribute('aria-haspopup', 'true');
+            btn.addEventListener('click', e => { e.stopPropagation(); dd.classList.toggle('open'); btn.setAttribute('aria-expanded', dd.classList.contains('open')); });
+            document.addEventListener('click', e => { if (!dd.contains(e.target)) dd.classList.remove('open'); });
+            document.addEventListener('keydown', e => { if (e.key === 'Escape') dd.classList.remove('open'); });
+        })();
+    </script>
+    <script>window.PW_LANG = 'vi';</script>
+    <script src="photo_walk_booking.js"></script>
+    <script>
+        /* Thanh BR / PW: chuyển giữa form đặt phòng và form đặt Photo Walk */
+        (() => {
+            const tabBR = document.getElementById('bk-tab-br'), tabPW = document.getElementById('bk-tab-pw');
+            const pBR = document.getElementById('bk-panel-br'), pPW = document.getElementById('bk-panel-pw');
+            if (!tabBR || !tabPW || !pBR || !pPW) return;
+            function show(which) {
+                const pw = which === 'pw';
+                tabBR.setAttribute('aria-selected', String(!pw));
+                tabPW.setAttribute('aria-selected', String(pw));
+                const on = pw ? pPW : pBR, off = pw ? pBR : pPW;
+                off.hidden = true; off.classList.remove('bk-swap');
+                on.hidden = false; void on.offsetWidth; on.classList.add('bk-swap');
+            }
+            tabBR.addEventListener('click', () => show('br'));
+            tabPW.addEventListener('click', () => show('pw'));
+
+            const iso = d => new Date(d.getTime() - d.getTimezoneOffset() * 6e4).toISOString().slice(0, 10);
+            const start = document.getElementById('pw-start'), end = document.getElementById('pw-end');
+            const hours = document.getElementById('pw-hours'), go = document.getElementById('pw-btn');
+            const today = iso(new Date());
+            start.min = today; end.min = today;
+            start.addEventListener('change', () => {
+                end.min = start.value || today;
+                if (end.value && end.value < start.value) end.value = start.value;
+            });
+            go.addEventListener('click', () => {
+                if (!start.value) { alert('Vui lòng chọn ngày đặt chụp ảnh.'); start.focus(); return; }
+                if (end.value && end.value < start.value) { alert('Ngày hết hạn phải sau hoặc trùng ngày đặt chụp ảnh.'); end.focus(); return; }
+                const q = new URLSearchParams({ date: start.value, end: end.value || start.value, hours: hours.value });
+                location.href = '../photo_walk/photo_walk.html' + '?' + q.toString();
+            });
+        })();
+    </script>
+</body>
+</html>

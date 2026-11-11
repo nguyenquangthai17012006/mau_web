@@ -1,0 +1,330 @@
+/* =====================================================================
+   mobile.css – tối ưu điện thoại cho 3Hills Homestay
+   Nạp SAU CÙNG (sau trangchu.css / trangphu.css / chi_tiet.css).
+   Không ảnh hưởng giao diện máy tính: mọi thứ nằm trong @media.
+   ===================================================================== */
+
+/* ---------- Thành phần mới (ẩn trên máy tính) ---------- */
+.mb-burger, .mb-drawer, .mb-bar { display: none; }
+
+:root {
+  --mb-ink: #1d1b18;
+  --mb-cream: #f8f1e3;
+  --mb-gold: #c9a45c;
+  --mb-green: #0c3b29;
+  --mb-accent: #f0883e;
+}
+
+/* =====================================================================
+   A. MENU DI ĐỘNG  (≤1024px) – dùng chung cho cả 3 loại trang
+   ===================================================================== */
+@media (max-width: 1024px) {
+
+  /* Ẩn nav / ngôn ngữ / nút đặt phòng cũ trong header (đã chuyển vào menu) */
+  .hd .nav, .hd .lang, .hd .cta,
+  .hd-r .nav, .hd-r .lang, .hd-r .cta,
+  .header__right > nav,
+  .header__right > button { display: none !important; }
+
+  .mb-burger {
+    display: inline-grid;
+    place-items: center;
+    flex: none;
+    width: 48px; height: 48px;
+    padding: 0; margin: 0;
+    border-radius: 50%;
+    border: 1px solid rgba(255,255,255,.55);
+    background: rgba(255,255,255,.18);
+    -webkit-backdrop-filter: blur(14px) saturate(1.6);
+    backdrop-filter: blur(14px) saturate(1.6);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.6), 0 6px 20px rgba(0,0,0,.14);
+    color: #3a2f22;
+    cursor: pointer;
+    pointer-events: auto;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .mb-burger span, .mb-burger span::before, .mb-burger span::after {
+    content: ""; display: block;
+    width: 20px; height: 2px; border-radius: 2px;
+    background: currentColor;
+    transition: transform .3s ease, opacity .2s ease, background .2s;
+  }
+  .mb-burger span { position: relative; }
+  .mb-burger span::before, .mb-burger span::after { position: absolute; left: 0; }
+  .mb-burger span::before { top: -6px; }
+  .mb-burger span::after  { top:  6px; }
+  .mb-open .mb-burger span { background: transparent; }
+  .mb-open .mb-burger span::before { transform: translateY(6px) rotate(45deg); }
+  .mb-open .mb-burger span::after  { transform: translateY(-6px) rotate(-45deg); }
+  .mb-open .mb-burger { color: #fff; border-color: rgba(255,255,255,.4); background: rgba(255,255,255,.12); z-index: 1200; position: relative; }
+
+  /* Ngăn kéo toàn màn hình */
+  .mb-drawer {
+    display: flex;
+    position: fixed; inset: 0; z-index: 1100;
+    flex-direction: column;
+    justify-content: center;
+    gap: 28px;
+    padding: max(88px, env(safe-area-inset-top)) 28px max(32px, env(safe-area-inset-bottom));
+    background:
+      radial-gradient(120% 70% at 100% 0%, rgba(201,164,92,.22), transparent 60%),
+      linear-gradient(180deg, #0c3b29 0%, #082d1f 100%);
+    color: #fff;
+    opacity: 0; visibility: hidden;
+    transform: translateY(-12px);
+    transition: opacity .35s ease, transform .35s ease, visibility 0s linear .35s;
+    overflow-y: auto;
+  }
+  .mb-open .mb-drawer {
+    opacity: 1; visibility: visible; transform: none;
+    transition: opacity .35s ease, transform .35s ease;
+  }
+  .mb-open { overflow: hidden; }
+
+  .mb-links { display: grid; gap: 4px; }
+  .mb-links a {
+    display: block;
+    padding: 14px 0;
+    font: 400 clamp(30px, 9vw, 44px)/1.1 "Playfair Display", "Bodoni Moda", serif;
+    color: #fff;
+    border-bottom: 1px solid rgba(255,255,255,.14);
+  }
+  .mb-links a[aria-current="page"], .mb-links a.on { color: var(--mb-gold); }
+
+  .mb-actions { display: grid; gap: 12px; }
+  .mb-book {
+    display: flex; align-items: center; justify-content: center; gap: 10px;
+    min-height: 54px; border-radius: 999px;
+    background: #fff; color: #0a1a1c;
+    font: 600 16px/1 "Be Vietnam Pro", Inter, system-ui, sans-serif;
+  }
+  .mb-book svg { width: 20px; height: 20px; stroke: currentColor; fill: none; stroke-width: 1.8; }
+  .mb-lang {
+    display: flex; align-items: center; justify-content: center;
+    min-height: 48px; border-radius: 999px;
+    border: 1px solid rgba(255,255,255,.35);
+    color: #fff; font: 500 15px/1 "Be Vietnam Pro", Inter, system-ui, sans-serif;
+  }
+
+  /* Ẩn thanh cuộn tùy biến (đè lên nội dung trên màn hình nhỏ) */
+  .custom-scrollbar-track { display: none !important; }
+}
+
+/* =====================================================================
+   B. THANH ĐẶT PHÒNG CỐ ĐỊNH Ở ĐÁY  (≤860px)
+   ===================================================================== */
+@media (max-width: 860px) {
+  .mb-bar {
+    display: flex; align-items: center; justify-content: space-between; gap: 14px;
+    position: fixed; left: 10px; right: 10px;
+    bottom: max(10px, env(safe-area-inset-bottom));
+    z-index: 900;
+    padding: 10px 10px 10px 20px;
+    border-radius: 999px;
+    background: rgba(12,59,41,.82);
+    -webkit-backdrop-filter: blur(16px) saturate(1.5);
+    backdrop-filter: blur(16px) saturate(1.5);
+    border: 1px solid rgba(255,255,255,.22);
+    box-shadow: 0 12px 34px rgba(0,0,0,.28);
+    color: #fff;
+    transform: translateY(0);
+    transition: transform .35s ease, opacity .25s ease;
+  }
+  .mb-bar.is-hidden { transform: translateY(140%); opacity: 0; pointer-events: none; }
+  .mb-bar .mb-price { display: grid; line-height: 1.2; min-width: 0; }
+  .mb-bar .mb-price small { font-size: 11px; opacity: .72; }
+  .mb-bar .mb-price b { font: 600 17px/1.2 Inter, system-ui, sans-serif; white-space: nowrap; }
+  .mb-bar a.mb-go {
+    flex: none;
+    display: inline-flex; align-items: center; justify-content: center;
+    min-height: 46px; padding: 0 24px; border-radius: 999px;
+    background: #fff; color: #0a1a1c;
+    font: 600 15px/1 "Be Vietnam Pro", Inter, system-ui, sans-serif;
+  }
+  .mb-open .mb-bar { transform: translateY(140%); opacity: 0; pointer-events: none; }
+
+  /* chừa chỗ để thanh đáy không che nội dung cuối trang */
+  body.has-mb-bar { padding-bottom: 0; }
+  body.has-mb-bar .site-footer .footer-inner { padding-bottom: 104px; }
+}
+
+/* =====================================================================
+   C. TRANG CHI TIẾT PHÒNG  (chi_tiet.css)  ≤860px
+   ===================================================================== */
+@media (max-width: 860px) {
+  html { scroll-padding-top: 76px; }
+  body { font-size: 16px; line-height: 1.65; }
+
+  .hd { display: flex; align-items: center; justify-content: space-between; gap: 10px;
+        padding: max(10px, env(safe-area-inset-top)) 14px 10px; }
+  .hd .brand { font-size: 14px; line-height: 1.15; gap: 10px; min-width: 0; white-space: normal; }
+  .hd .act { gap: 8px; }
+  .hd.sc { background: linear-gradient(180deg, rgba(10,26,28,.55), rgba(10,26,28,0)); }
+
+  .hero { height: 78svh; min-height: 460px; }
+  .hero h1 {
+    left: 20px; right: 20px; bottom: 44px;
+    font-size: clamp(30px, 8.6vw, 44px);
+    line-height: 1.1; letter-spacing: -.02em;
+  }
+
+  .wrap { gap: 0; padding: 4px 20px 40px; }
+  h2 { font-size: 22px; }
+  section { padding: 28px 0; }
+  p { max-width: none; }
+
+  .pic { height: auto; aspect-ratio: 4 / 3; border-radius: 16px; }
+
+  .day { grid-template-columns: 74px 1fr; gap: 12px; padding: 14px 0; }
+  .day h3 { font-size: 16px; line-height: 1.35; }
+
+  /* Khối giá: thành thẻ gọn ngay dưới hero */
+  .side {
+    margin: 0 0 8px; padding: 18px 18px 8px;
+    border: 1px solid var(--line); border-radius: 18px;
+    background: rgba(255,255,255,.04);
+  }
+  .price b { font-size: 26px; }
+  .meta { margin: 10px 0 14px; font-size: 14px; gap: 8px; }
+  .has-mb-bar .side .btn { display: none; }
+  .btn { min-height: 46px; padding: 0 22px; }
+
+  .chk { gap: 12px; }
+  .chk span { font-size: 15px; }
+
+  .more { padding: 0 20px 40px; }
+  .more header { flex-wrap: wrap; align-items: center; gap: 14px; margin-bottom: 20px; }
+  .more h2 { font-size: clamp(28px, 8vw, 38px); }
+  .cards { border-top: 1px solid var(--line); }
+  .card { padding: 20px 0; align-items: center; border-bottom: 1px solid var(--line); }
+  .card h3 { font-size: 18px; }
+  .card .th { width: 34%; flex: none; border-radius: 12px; }
+}
+
+@media (max-width: 380px) {
+  .hd .brand { font-size: 12.5px; }
+  .day { grid-template-columns: 1fr; gap: 4px; }
+}
+
+/* =====================================================================
+   D. TRANG HẠNG PHÒNG  (trangphu.css)  ≤860px
+   ===================================================================== */
+@media (max-width: 860px) {
+  body { font-size: 16px; }
+
+  .hd { padding: max(10px, env(safe-area-inset-top)) 14px 10px; gap: 10px; }
+  .brand { font-size: 14px; line-height: 1.15; gap: 10px; white-space: normal; }
+  .brand svg { width: 42px; height: 42px; }
+  .hd-r { gap: 8px; }
+
+  .hero { min-height: 100svh; padding: 20px 20px 36px; }
+  .hero h1 { font-size: clamp(40px, 12vw, 60px); margin-bottom: 14px; }
+  .hero p  { font-size: 16px; line-height: 1.55; }
+
+  .intro { padding: 72px 20px 36px; }
+  .intro h2 { font-size: clamp(30px, 9vw, 44px); }
+
+  /* Thẻ dịch vụ/hạng phòng xếp chồng: ảnh trên – chữ dưới */
+  .svc { height: 100svh; }
+  .svc .in {
+    grid-template-columns: 1fr;
+    grid-template-rows: 40% minmax(0, 1fr);
+    gap: 14px;
+    padding: 10px 10px 14px;
+    direction: ltr !important;
+  }
+  .svc .ph { height: 100%; border-radius: 18px; }
+  .svc .tx { max-width: none; width: 100%; justify-self: stretch !important; padding: 0 6px; min-height: 0; overflow: hidden; }
+  .svc h3 { font-size: clamp(24px, 7vw, 32px); margin-bottom: 10px; }
+  .svc .tx p { font-size: 15px; line-height: 1.5; }
+  .ft { gap: 0 14px; }
+  .ft li { padding: 10px 0; gap: 10px; font-size: 14px; }
+  .ft svg { width: 20px; height: 20px; }
+
+  /* FAQ / danh sách hạng phòng */
+  .faq { padding: 80px 16px 72px; }
+  .faq > h2 { font-size: clamp(30px, 9vw, 44px); margin-bottom: 32px; }
+  .faq-g { grid-template-columns: 1fr; gap: 24px; }
+  .faq-img { position: relative; top: 0; height: 62vw; max-height: 380px; border-radius: 18px; }
+  .q button { padding: 20px 0; font-size: clamp(21px, 6vw, 27px); min-height: 56px; }
+  .q button span { font-size: 30px; }
+  .q p { font-size: 15.5px; max-width: none; }
+  .q .row { flex-direction: column; align-items: stretch; gap: 16px; }
+  .q .row img { width: 100%; aspect-ratio: 16 / 10; border-radius: 14px; }
+
+  .end p { font-size: 15px; line-height: 1.7; }
+}
+
+/* =====================================================================
+   E. TRANG CHỦ  (trangchu.css + style nội tuyến)  ≤860px
+   ===================================================================== */
+@media (max-width: 860px) {
+  /* Header nội tuyến padding 15px 30px → thu gọn */
+  .header { height: auto !important; padding: 8px 14px !important; top: 8px; }
+  .header > .logo, .header .logo { gap: 10px !important; min-width: 0; }
+  .header .logo img { width: 42px !important; height: 42px !important; border-radius: 14px !important; }
+  .header .logo span { font-size: 14px !important; }
+  .header__right { gap: 8px; }
+
+  /* 4 thẻ cuộn chồng */
+  .svc {
+    --svc-w: 94vw;
+    --svc-card-h: 84svh;
+    --svc-top: 9svh;
+  }
+  .svc-stage { height: 100svh; }
+  .svc-card {
+    grid-template-columns: 1fr !important;
+    grid-template-rows: 34% minmax(0, 1fr) !important;
+    gap: 10px; padding: 10px; border-radius: 26px;
+  }
+  .svc-card--dark .svc-panel { order: 0; }
+  .svc-card--dark .svc-text  { order: 1; }
+  .svc-panel { border-radius: 18px; }
+  .svc-text {
+    font-size: 13px;
+    padding: 1.2em 1.3em;
+    justify-content: flex-start;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .svc-title { font-size: 1.55em; }
+  .svc-stats { gap: .8em; padding-top: 1em; }
+
+  /* Thanh đặt phòng ở hero */
+  .bk-glass { padding: 12px; gap: 10px; }
+  .bk-control, .bk-btn { height: 48px; }
+  .bk-control input, .bk-control select { font-size: 16px; } /* tránh iOS tự phóng to khi chạm */
+}
+
+@media (max-width: 480px) {
+  .svc-stats { grid-template-columns: repeat(3, minmax(0,1fr)); }
+  .bk-glass { grid-template-columns: 1fr; }
+}
+
+/* =====================================================================
+   F. CHÂN TRANG & CHUNG  ≤860px
+   ===================================================================== */
+@media (max-width: 860px) {
+  .site-footer .footer-inner { padding: 56px 20px 32px; }
+  .site-footer .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+  .site-footer .brand-name { font-size: 19px; }
+  .site-footer .contact-list { padding: 0; list-style: none; }
+  .site-footer .contact-list li { margin-bottom: 14px; }
+  .site-footer .contact-list a { display: inline-block; padding: 2px 0; }
+  .site-footer .chip { padding: 12px 16px; }
+  .site-footer .admin-btn { min-height: 50px; }
+  .site-footer .footer-bottom { margin-top: 36px; padding-top: 24px; font-size: 12.5px; line-height: 1.6; }
+
+  /* Vùng chạm tối thiểu ~44px */
+  a.btn, .btn, .cta, .lang { min-height: 44px; }
+
+  /* Không cho nội dung tràn ngang */
+  html, body { overflow-x: clip; }
+  img, video, svg { max-width: 100%; }
+}
+
+/* Tắt hiệu ứng nặng khi người dùng chọn giảm chuyển động */
+@media (max-width: 1024px) and (prefers-reduced-motion: reduce) {
+  .mb-drawer, .mb-bar, .mb-burger span, .mb-burger span::before, .mb-burger span::after { transition: none !important; }
+}
